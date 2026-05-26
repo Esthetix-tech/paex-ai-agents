@@ -1,0 +1,42 @@
+# OS / Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+NTUSER.DAT*
+*.tmp
+*.log
+
+# Editors
+.vscode/
+.idea/
+
+# Node / package cache
+node_modules/
+.pnpm-store/
+.npm/
+.cache/
+
+# Codex / Claude local cache
+.codex/
+.claude/
+.claude.json
+.claude.json.backup
+
+# Environment / secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.crt
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Build outputs
+dist/
+build/
+coverage/
