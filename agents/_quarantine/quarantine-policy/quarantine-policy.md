@@ -1,6 +1,6 @@
 ---
 name: Quarantine Policy
-title: PACE-AI Quarantine Policy
+title: PAEX-AI Quarantine Policy
 description: Defines when Agent files must be isolated, how they are reviewed, and how they may be restored into the active repository.
 layer: _quarantine
 context_layer: Repository Governance
@@ -60,7 +60,7 @@ exemption_review_required: true
 exemption_review_date: 2026-05-26
 ---
 
-# Quarantine Policy｜PACE-AI Quarantine Policy
+# Quarantine Policy｜PAEX-AI Quarantine Policy
 
 ## 1. Purpose
 

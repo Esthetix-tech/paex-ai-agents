@@ -1,6 +1,6 @@
 ---
 name: PR CI Validation Checklist
-title: PACE-AI PR / CI Validation Checklist
+title: PAEX-AI PR / CI Validation Checklist
 description: Pull request and CI validation checklist for AGENTS.md v1.4 readiness, covering frontmatter, routing, risk, hooks, quarantine and Business Architecture Context Stack rules.
 layer: governance
 context_layer: Repository Governance
@@ -61,7 +61,7 @@ exemption_review_required: true
 exemption_review_date: 2026-05-26
 ---
 
-# PR / CI Validation Checklist｜PACE-AI v1.4 Readiness
+# PR / CI Validation Checklist｜PAEX-AI v1.4 Readiness
 
 ## 1. Purpose
 
@@ -273,7 +273,7 @@ Human / Guardian review is required when CI detects semantic ambiguity, risk is 
 ## 12. PR Review Comment Template
 
 ```text
-PACE-AI PR Review
+PAEX-AI PR Review
 
 Risk Level:
 Business Context Layer:

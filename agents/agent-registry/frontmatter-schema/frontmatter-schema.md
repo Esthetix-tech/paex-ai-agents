@@ -1,7 +1,7 @@
 ---
 name: Frontmatter Schema
-title: PACE-AI Agent Frontmatter Schema
-description: Mechanical validation schema for Agent, governance, registry, context, shared and quarantine files inside the PACE-AI agents repository.
+title: PAEX-AI Agent Frontmatter Schema
+description: Mechanical validation schema for Agent, governance, registry, context, shared and quarantine files inside the PAEX-AI agents repository.
 layer: agent-registry
 context_layer: Repository Governance
 pace_layer: Repository Governance / Metadata Schema
@@ -55,7 +55,7 @@ exemption_review_required: true
 exemption_review_date: 2026-05-26
 ---
 
-# Frontmatter Schema｜PACE-AI Agent Frontmatter Schema
+# Frontmatter Schema｜PAEX-AI Agent Frontmatter Schema
 
 ## 1. Purpose｜目的
 

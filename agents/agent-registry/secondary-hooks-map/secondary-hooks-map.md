@@ -1,6 +1,6 @@
 ---
 name: Secondary Hooks Map
-title: PACE-AI Secondary Hooks Map
+title: PAEX-AI Secondary Hooks Map
 description: Defines mandatory secondary hooks for risk domains, ensuring high-risk Mission, Core or Platform tasks attach required Guardian, WORM, Canary, Human Override or Sovereign controls.
 layer: agent-registry
 context_layer: Repository Governance
@@ -60,7 +60,7 @@ related_files:
   - ../../AGENTS_BUSINESS_ARCHITECTURE_RULE.md
 ---
 
-# Secondary Hooks Map｜PACE-AI Secondary Hooks Map
+# Secondary Hooks Map｜PAEX-AI Secondary Hooks Map
 
 ## 1. Purpose
 

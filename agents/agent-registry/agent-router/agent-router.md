@@ -1,6 +1,6 @@
 ---
 name: Agent Router
-title: PACE-AI Agent Router
+title: PAEX-AI Agent Router
 description: Routing rules for matching tasks to C-A-E-P agents, Business Architecture Context Stack layers, risk levels and mandatory secondary hooks.
 layer: agent-registry
 context_layer: Repository Governance
@@ -52,11 +52,11 @@ related_files:
   - ../../AGENTS_BUSINESS_ARCHITECTURE_RULE.md
 ---
 
-# Agent Router｜PACE-AI Agent Router
+# Agent Router｜PAEX-AI Agent Router
 
 ## 1. Purpose
 
-This file defines how Codex routes tasks inside the PACE-AI `agents/` repository.
+This file defines how Codex routes tasks inside the PAEX-AI `agents/` repository.
 
 Core rule:
 

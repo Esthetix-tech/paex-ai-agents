@@ -1,6 +1,6 @@
 ---
 name: Risk Level Map
-title: PACE-AI Risk Level Map
+title: PAEX-AI Risk Level Map
 description: Defines Low, Medium, High and Critical risk classifications for routing, hooks, evidence, approval and execution boundaries.
 layer: agent-registry
 context_layer: Repository Governance
@@ -59,7 +59,7 @@ exemption_review_required: true
 exemption_review_date: 2026-05-26
 ---
 
-# Risk Level Map｜PACE-AI Risk Level Map
+# Risk Level Map｜PAEX-AI Risk Level Map
 
 ## 1. Purpose
 

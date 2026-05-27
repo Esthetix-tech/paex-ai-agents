@@ -1,6 +1,6 @@
 ---
 name: Registry Maintenance Policy
-title: PACE-AI Agent Registry Maintenance Policy
+title: PAEX-AI Agent Registry Maintenance Policy
 description: Defines how the agent registry, router, responsibility matrix, capability map, layer map, risk map and secondary hooks are maintained, reviewed, repaired and audited.
 layer: agent-registry
 pace_layer: Platform / Repository Governance
@@ -31,7 +31,7 @@ related_files:
   - _quarantine/quarantine-policy.md
 ---
 
-# PACE-AI Agent Registry Maintenance Policy
+# PAEX-AI Agent Registry Maintenance Policy
 
 ## 1. Purpose
 
@@ -89,7 +89,7 @@ It does not override Guardian or Sovereign governance.
 
 Its job is to ensure that routing, responsibility, capability, risk and layer placement remain accurate.
 
-In PACE-AI terms:
+In PAEX-AI terms:
 
 | Registry Function | Governance Meaning |
 |---|---|

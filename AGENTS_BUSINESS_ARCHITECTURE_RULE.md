@@ -78,7 +78,7 @@ It builds reusable AI operating systems, SaaS engines, Agent infrastructure, ent
 Esthetix is responsible for building and evolving:
 
 - ESTRIX Core Engine;
-- PACE-AI Governance OS;
+- PAEX-AI Governance OS;
 - ESNex Ecosystem Hub;
 - Agent Engine / Codex workspace governance;
 - reusable enterprise infrastructure;
@@ -252,7 +252,7 @@ A requirement belongs to L1 when it involves:
 - Esthetix company positioning;
 - Esthetix governance model;
 - Esthetix's R&D role;
-- PACE-AI Governance OS;
+- PAEX-AI Governance OS;
 - Agent Engine / Codex workspace strategy;
 - enterprise knowledge system;
 - data governance;
@@ -265,7 +265,7 @@ Examples:
 - creating governance rules for Codex workspace;
 - designing reusable enterprise infrastructure;
 - writing company-wide AI operations principles;
-- defining how ESTRIX, PACE-AI and ESNex relate to Esthetix.
+- defining how ESTRIX, PAEX-AI and ESNex relate to Esthetix.
 
 ---
 

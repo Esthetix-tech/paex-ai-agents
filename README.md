@@ -1,7 +1,7 @@
 ---
 name: agents-readme
-title: PACE-AI Agents Repository README
-description: Root-level architecture and governance guide for the PACE-AI agents repository, defining repository purpose, Business Architecture Context Stack, C-A-E-P agent layers, routing principles, frontmatter discipline, risk classification, secondary hooks, quarantine policy, PR / CI validation and v1.4 activation rules.
+title: PAEX-AI Agents Repository README
+description: Root-level architecture and governance guide for the PAEX-AI agents repository, defining repository purpose, Business Architecture Context Stack, C-A-E-P agent layers, routing principles, frontmatter discipline, risk classification, secondary hooks, quarantine policy, PR / CI validation and v1.4 activation rules.
 layer: agent-registry
 context_layer: Repository Governance
 pace_layer: Repository Governance / Global Overview
@@ -73,11 +73,11 @@ exemption_review_required: true
 exemption_review_date: 2026-05-26
 ---
 
-# PACE-AI Agents Repository
+# PAEX-AI Agents Repository
 
 ## 1. Purpose
 
-The `agents/` repository is the formal operating library for the PACE-AI Enterprise Governance OS.
+The `agents/` repository is the formal operating library for the PAEX-AI Enterprise Governance OS.
 
 It stores and governs:
 
@@ -107,7 +107,7 @@ It is a governed operating structure that defines:
 - what each Agent owns;
 - what each Agent must not own;
 - which business context layer each file belongs to;
-- which PACE-AI authority layer each Agent belongs to;
+- which PAEX-AI authority layer each Agent belongs to;
 - what risk level each Agent carries;
 - which tasks may be routed to each Agent;
 - which tasks must not be routed to each Agent;
@@ -126,13 +126,13 @@ Core rule:
 Plain-language interpretation:
 
 > 這不是 prompt 倉庫。  
-> 這是 Esthetix / PACE-AI 的 Agent 作戰編制表、權限地圖、風險控管台與治理黑盒子。
+> 這是 Esthetix / PAEX-AI 的 Agent 作戰編制表、權限地圖、風險控管台與治理黑盒子。
 
 ---
 
 ## 1.1 What This Repository Is
 
-This repository is the source of truth for how Codex, coding agents, repository agents, automation agents, governance agents and Agent Engine support agents operate inside Esthetix / ESTRIX / PACE-AI.
+This repository is the source of truth for how Codex, coding agents, repository agents, automation agents, governance agents and Agent Engine support agents operate inside Esthetix / ESTRIX / PAEX-AI.
 
 It answers:
 
@@ -177,7 +177,7 @@ Plain-language interpretation:
 
 ## 2. Operating Doctrine
 
-The repository follows the PACE-AI governance doctrine.
+The repository follows the PAEX-AI governance doctrine.
 
 ```text
 Classify before routing.
