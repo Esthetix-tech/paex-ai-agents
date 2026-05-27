@@ -1,7 +1,7 @@
 ---
 name: Governance Protocols Index
-title: PACE-AI Sovereign Governance Protocols Index
-description: Sovereign-level index for core governance protocols, activation orders, decision playbooks, escalation controls and company-level routing logic used by PACE-AI Enterprise Governance OS.
+title: PAEX-AI Sovereign Governance Protocols Index
+description: Sovereign-level index for core governance protocols, activation orders, decision playbooks, escalation controls and company-level routing logic used by PAEX-AI Enterprise Governance OS.
 layer: sovereign
 pace_layer: C-Level / Global Governance
 risk_level: high
@@ -37,11 +37,11 @@ related_files:
   - _quarantine/quarantine-policy.md
 ---
 
-# PACE-AI Sovereign Governance Protocols Index
+# PAEX-AI Sovereign Governance Protocols Index
 
 ## 1. Purpose
 
-This file defines how the `sovereign/` layer references, summarizes and routes to the major governance protocols used by PACE-AI Enterprise Governance OS.
+This file defines how the `sovereign/` layer references, summarizes and routes to the major governance protocols used by PAEX-AI Enterprise Governance OS.
 
 It is the sovereign-level command index for:
 
@@ -67,7 +67,7 @@ Core rule:
 
 > Governance owns the operating law. Sovereign applies that law to company-level decisions.
 
-The purpose of this index is to prevent PACE-AI from making high-risk decisions by intuition, convenience or routing guesswork.
+The purpose of this index is to prevent PAEX-AI from making high-risk decisions by intuition, convenience or routing guesswork.
 
 When a decision touches company-wide interest, this index should help answer:
 
@@ -92,7 +92,7 @@ Its function is not to execute frontline work.
 
 Its function is to provide company-level governance navigation.
 
-In the PACE model:
+In the PAEX model:
 
 | Layer | Governance Meaning |
 |---|---|
@@ -161,7 +161,7 @@ Core rule:
 | Registry Governance | `agent-registry/registry-maintenance-policy.md` | Registry consistency, routing safety, responsibility mapping and capability control. |
 | Frontmatter Schema | `agent-registry/frontmatter-schema.md` | Required metadata contract for all formal Agent and governance files. |
 | Risk Level Map | `agent-registry/risk-level-map.md` | Risk classification logic and execution boundary. |
-| Layer Map | `agent-registry/layer-map.md` | Repository layer rules and PACE placement logic. |
+| Layer Map | `agent-registry/layer-map.md` | Repository layer rules and PAEX placement logic. |
 | Quarantine Policy | `_quarantine/quarantine-policy.md` | Unsafe file containment, review, repair and restoration rules. |
 | Quarantine README | `_quarantine/README.md` | Repository-level explanation of quarantine categories and Codex boundaries. |
 
