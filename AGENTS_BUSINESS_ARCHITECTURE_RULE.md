@@ -2,9 +2,9 @@
 name: AGENTS Business Architecture Rule
 title: AGENTS Business Architecture Rule
 description: Defines the required business architecture classification rule for Esthetix, ESTRIX, SHINES and SoMatch, and requires Codex to classify every new requirement into the five-layer Context Stack before execution.
-layer: global
-context_layer: Business Architecture Context Rule
-pace_layer: Repository Governance / Business Architecture
+layer: governance
+context_layer: Repository Governance
+pace_layer: Repository Governance / Business Architecture Context Stack
 risk_level: high
 status: active
 owner: K / CEO
@@ -25,6 +25,28 @@ related_files:
   - 20_estrix_core/ESTRIX_USE_CASE_REGISTRY.md
   - 30_applications/shines_field/SHINES_FIELD_CONTEXT.md
   - 30_applications/somatch_service_brand/SOMATCH_SERVICE_BRAND_CONTEXT.md
+requires_worm: true
+requires_guardian_review: true
+requires_human_approval: true
+secondary_hooks:
+  - governance-review
+  - registry-maintenance-review
+  - ci-validation-review
+forbidden_actions:
+  - redefine_business_architecture_without_review
+  - collapse_esthetix_estrix_shines_somatch_layers
+  - promote_l4_to_l2_without_classification
+  - treat_application_logic_as_core_without_review
+rollback_required: true
+canary_required: false
+exemption_reason: business_architecture_policy_only_no_direct_production_execution
+exemption_scope:
+  - canary_not_required_for_non_release_policy
+exemption_approved_by: K / CEO
+delegated_reviewer: Agent Repository Steward
+exemption_review_required: true
+exemption_review_date: 2026-05-26
+
 ---
 
 # AGENTS Business Architecture Rule

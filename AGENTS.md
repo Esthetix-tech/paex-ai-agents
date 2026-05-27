@@ -51,6 +51,29 @@ forbidden_actions:
   - self_approve_high_or_critical_work
   - route_quarantined_files_as_active
   - execute_irreversible_company_action_without_human_approval
+allowed_actions:
+  - advise
+  - analyze
+  - implement_within_authorized_scope
+  - configure_within_authorized_scope
+  - test_non_destructive_changes
+  - document
+  - refactor_with_reviewable_diff
+  - propose_governance_mechanisms
+  - prepare_decision_packages
+  - identify_risks
+  - recommend_routing_and_escalation
+  - maintain_repository_consistency
+  - propose_quarantine_or_restoration
+evidence_required:
+  - frontmatter_validation_result
+  - related_files_path_check
+  - markdown_structure_check
+  - duplicate_frontmatter_key_check
+  - guardian_review_record
+  - worm_activation_record
+  - pr_ci_validation_result
+  - human_approval_record
 rollback_required: true
 canary_required: false
 related_files:

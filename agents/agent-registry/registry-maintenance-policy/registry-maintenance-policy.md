@@ -5,7 +5,7 @@ description: Defines how the agent registry, router, responsibility matrix, capa
 layer: agent-registry
 pace_layer: Platform / Repository Governance
 risk_level: high
-status: stable
+status: active
 owner: Agent Repository Steward
 review_required: true
 human_approval_required: true
@@ -29,6 +29,35 @@ related_files:
   - governance/production-readiness-gate.md
   - _quarantine/README.md
   - _quarantine/quarantine-policy.md
+context_layer: Repository Governance
+status: active_candidate
+requires_worm: true
+requires_guardian_review: true
+requires_human_approval: true
+human_approval_scope:
+  - file_activation
+  - registry_policy_change
+  - registry_index_change
+  - routing_authority_change
+  - high_or_critical_registry_exception
+secondary_hooks:
+  - registry-maintenance-review
+  - governance-review
+  - ci-validation-review
+forbidden_actions:
+  - modify_registry_authority_without_review
+  - activate_agent_without_frontmatter_validation
+  - bypass_router_for_registry_updates
+  - restore_quarantined_file_without_required_review
+rollback_required: true
+canary_required: false
+exemption_reason: registry_policy_only_no_direct_production_execution
+exemption_scope:
+  - canary_not_required_for_non_release_policy
+exemption_approved_by: K / CEO
+delegated_reviewer: Agent Repository Steward
+exemption_review_required: true
+exemption_review_date: 2026-05-26
 ---
 
 # PAEX-AI Agent Registry Maintenance Policy

@@ -116,7 +116,8 @@ Every PR touching `agents/` should be checked for frontmatter validity, folder-l
 | CI-027 | Companion Governance Files Synchronized | v1.4 governance files | FAIL |
 | CI-028 | Exempt File Rule Applied | non-governed assets | WARNING / FAIL |
 | CI-029 | Duplicate Frontmatter Keys | all governed `.md` files | FAIL |
-
+| CI-030 | Root Path Normalization | root-level and nested governance files | FAIL |
+| CI-031 | Human Approval Field Alignment | High / Critical files | FAIL / HOLD |
 ---
 
 ## 4. Frontmatter Checklist
