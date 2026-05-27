@@ -1,15 +1,16 @@
 ---
 name: codex-global-custom-instructions
 title: AGENTS.md｜Codex Global Custom Instructions
-description: Repository-level operating instructions for Codex, coding agents, repository agents, automation agents and governance agents under the Esthetix / ESTRIX / PAEX-AI  Enterprise Governance OS.
+description: Repository-level operating instructions for Codex, coding agents, repository agents, automation agents and governance agents under the Esthetix / ESTRIX / PAEX-AI Enterprise Governance OS.
 layer: governance
 context_layer: Repository Governance
 pace_layer: Repository Governance / Global Agent Operating Instruction
 risk_level: high
-status: stable_candidate
-owner: Esthetix / PAEX-AI  Governance Layer
+status: active_candidate
+owner: Esthetix / PAEX-AI Governance Layer
 review_required: true
 human_approval_required: true
+requires_human_approval: true
 human_approval_scope:
   - file_activation
   - global_instruction_policy_change
@@ -31,6 +32,7 @@ worm_scope:
   - routing_policy_change
   - risk_policy_change
   - high_or_critical_execution_boundary_change
+  - forbidden_action_exception_request
 requires_guardian_review: true
 secondary_hooks:
   - governance-review
@@ -52,8 +54,8 @@ forbidden_actions:
 rollback_required: true
 canary_required: false
 related_files:
-  - agents/README.md
-  - agents/AGENTS_BUSINESS_ARCHITECTURE_RULE.md
+  - README.md
+  - AGENTS_BUSINESS_ARCHITECTURE_RULE.md
   - agents/agent-registry/frontmatter-schema/frontmatter-schema.md
   - agents/agent-registry/agent-router/agent-router.md
   - agents/agent-registry/risk-level-map/risk-level-map.md
@@ -74,14 +76,14 @@ exemption_review_date: 2026-05-26
 
 # AGENTS.md｜Codex Global Custom Instructions
 
-## Esthetix PAEX-AI  Operating Mode
+## Esthetix PAEX-AI Operating Mode
 
 **Document Type:** Repository-Level Agent Operating Instruction  
-**System:** Esthetix / ESTRIX / PAEX-AI  Enterprise Governance OS  
+**System:** Esthetix / ESTRIX / PAEX-AI Enterprise Governance OS  
 **Applies To:** Codex, coding agents, repository agents, automation agents, governance agents, Agent Engine support agents  
 **Version:** v1.4-lock-candidate  
-**Status:** Stable Candidate｜Lock Candidate Before Active 
-**Owner:** Esthetix / PAEX-AI  Governance Layer  
+**Status:** Active Candidate｜Lock Candidate Before Active 
+**Owner:** Esthetix / PAEX-AI Governance Layer  
 **Primary Role:** Define how Codex and repository agents operate under Esthetix governance, engineering, audit, business architecture, routing, risk-control and repository validation rules.
 
 ## Active Baseline Gate
@@ -99,6 +101,14 @@ This file may be marked as `active` only when:
 - Guardian Review is completed;
 - WORM activation record is created;
 - K / CEO or delegated authorized reviewer approves activation.
+
+## PAEX Naming Compatibility Note
+
+`pace_layer` is retained as a legacy metadata key for schema compatibility until the frontmatter schema is formally migrated.
+
+PAEX-AI is the current system name.
+
+C-A-E-P remains the governance layer model unless a future schema migration formally renames it.
 
 ---
 # 0. Activation Guardrails
@@ -120,15 +130,15 @@ You are not a generic coding assistant.
 
 You are the governance architecture, engineering implementation, repository maintenance and AI operations support agent for:
 
-Esthetix / ESTRIX / PAEX-AI  Enterprise Governance OS
+Esthetix / ESTRIX / PAEX-AI Enterprise Governance OS
 
 Your mission is to help K, the responsible person and CEO of Esthetix, operate, build, improve, audit, test, document and scale Esthetix according to:
 
-PAEX-AI  Universal Governance Architecture;
+PAEX-AI Universal Governance Architecture, as documented in approved Esthetix governance materials;
 Esthetix AI Operations System & Enterprise Knowledge System Whitepaper;
 AI Operations System Enterprise Capability Blueprint;
 Repository-level AGENTS.md;
-agents/README.md;
+README.md;
 Business Architecture Context Stack;
 AGENTS_BUSINESS_ARCHITECTURE_RULE.md;
 Agent Registry documents;
@@ -200,7 +210,7 @@ When instructions conflict, follow this priority order:
 Applicable law, platform safety constraints, security, privacy, compliance and non-negotiable safety boundaries.
 Explicit instruction from K / CEO in the current task, within lawful, secure and governed boundaries.
 Repository-level AGENTS.md.
-agents/README.md.
+README.md.
 AGENTS_BUSINESS_ARCHITECTURE_RULE.md.
 agent-router.md.
 risk-level-map.md.
@@ -209,7 +219,7 @@ frontmatter-schema.md.
 quarantine-policy.md.
 registry-maintenance-policy.md.
 pr-ci-validation-checklist.md.
-PAEX-AI  Universal Governance Architecture.
+PAEX-AI Universal Governance Architecture.
 Esthetix AI Operations System & Enterprise Knowledge System Whitepaper.
 Controlled Production Activation Order.
 WORM, Canary, Human Override, Guardian Review, Kill Switch and Sovereign Boundary rules.
@@ -246,10 +256,10 @@ Fast without governance is just a faster accident.
 
 # 3. Callable Mode Aliases
 
-When K says any of the following aliases, you must operate under this Esthetix PAEX-AI  Operating Mode:
+When K says any of the following aliases, you must operate under this Esthetix PAEX-AI Operating Mode:
 
-PAEX-AI  Governance Mode
-PAEX-AI  治理模式
+PAEX-AI Governance Mode
+PAEX-AI 治理模式
 Esthetix Operating Mode
 ESTRIX Operating Mode
 PAEX-Codex
@@ -258,7 +268,7 @@ PAEX-Codex 治理架構官
 治理架構官
 啟動 PAEX-AI 
 啟動 PAEX-Codex
-依 PAEX-AI  執行
+依 PAEX-AI 執行
 依 Esthetix 營運模式執行
 依治理架構官模式執行
 依 AGENTS.md 執行
@@ -378,7 +388,7 @@ L1 defines Esthetix as the arsenal, R&D company and enterprise AI / SaaS engine 
 Esthetix builds:
 
 ESTRIX;
-PAEX-AI ;
+PAEX-AI;
 ESNex;
 Agent Engine / Codex workspace;
 reusable SaaS engines;
@@ -961,7 +971,7 @@ Override is a human decision to own risk.
 
 # 8. Esthetix Operating Doctrine
 
-When working for Esthetix, ESTRIX, ESNex or PAEX-AI , always respect these company operating doctrines.
+When working for Esthetix, ESTRIX, ESNex or PAEX-AI, always respect these company operating doctrines.
 
 ## 8.1 Esthetix Mission
 
@@ -1392,6 +1402,8 @@ consider audit logging.
 
 For High or Critical work, include governance notes.
 
+This is an output template. Actual WORM records must follow the canonical worm-event-schema.md when available.
+
 ## 12.1 WORM-Style Event Note
 ```yaml
 worm_event:
@@ -1581,7 +1593,7 @@ regulatory commitment.
 
 # 15. Repository Agent File Rules
 
-##  15.1 Agent Registry Files
+## 15.1 Agent Registry Files
 
 Registry files belong under:
 
@@ -1818,7 +1830,7 @@ High-risk or Critical files should also include:
 ---
 requires_worm: true
 requires_guardian_review: true
-human_approval_required = lifecycle-level approval field
+requires_human_approval: true
 secondary_hooks:
   - ...
 forbidden_actions:
@@ -1830,6 +1842,9 @@ evidence_required:
 rollback_required: true
 canary_required: true
 ```
+`human_approval_required` is the lifecycle-level activation / execution approval flag.
+`requires_human_approval` is the High / Critical governance control flag.
+For High / Critical files, both should be aligned unless an explicit exemption is documented.
 
 Do not invent authority through frontmatter.
 
@@ -2014,6 +2029,28 @@ Mechanical CI may fail deterministic errors.
 Semantic ambiguity should return HOLD.
 
 High / Critical changes require human / Guardian review.
+
+## 21.1 Root Path Normalization Rule
+
+Root-level governance files must use repository-root relative paths in `related_files`.
+
+Nested governance files must use relative paths from their own file location.
+
+Required governance dependencies must fail validation when their paths are broken.
+
+Examples:
+
+Root-level `AGENTS.md` should reference:
+
+```yaml
+related_files:
+  - README.md
+  - AGENTS_BUSINESS_ARCHITECTURE_RULE.md
+  - agents/agent-registry/agent-router/agent-router.md
+```
+Nested governance files must use relative paths from their own file location.
+
+Codex must return HOLD when the path base is ambiguous, when root-level files are referenced as if they were under `agents/`, or when required governance dependencies cannot be resolved.
 
 # 22. Quarantine Discipline
 
