@@ -1,33 +1,37 @@
 ---
-name: AGENTS Business Architecture Rule
+name: agents-business-architecture-rule
 title: AGENTS Business Architecture Rule
 description: Defines the required business architecture classification rule for Esthetix, ESTRIX, SHINES and SoMatch, and requires Codex to classify every new requirement into the five-layer Context Stack before execution.
 layer: governance
 context_layer: Repository Governance
 pace_layer: Repository Governance / Business Architecture Context Stack
 risk_level: high
-status: active
+status: active_candidate
+version: v1.4-lock-candidate
 owner: K / CEO
 review_required: true
-human_approval_required: false
+human_approval_required: true
+requires_human_approval: true
+human_approval_scope:
+  - file_activation
+  - business_architecture_policy_change
+  - context_stack_rule_change
+  - l2_l3_l4_boundary_exception
+  - core_contamination_exception
+  - use_case_promotion_exception
 codex_autofix_allowed: limited
 tool_permissions: metadata_only
 routing_enabled: false
-registry_enabled: false
-version: v1.0
-related_files:
-  - 00_command/K_COMMAND_CENTER.md
-  - 10_esthetix_arsenal/ESTHETIX_ARSENAL_CONTEXT.md
-  - 10_esthetix_arsenal/ESTHETIX_GOVERNANCE_OS.md
-  - 20_estrix_core/ESTRIX_CORE_ENGINE_CONTEXT.md
-  - 20_estrix_core/ESTRIX_EXTENSION_POLICY.md
-  - 20_estrix_core/ESTRIX_MODULE_REGISTRY.md
-  - 20_estrix_core/ESTRIX_USE_CASE_REGISTRY.md
-  - 30_applications/shines_field/SHINES_FIELD_CONTEXT.md
-  - 30_applications/somatch_service_brand/SOMATCH_SERVICE_BRAND_CONTEXT.md
+registry_enabled: true
 requires_worm: true
+worm_scope:
+  - file_activation
+  - business_architecture_policy_change
+  - context_stack_rule_change
+  - l2_l3_l4_boundary_exception
+  - core_contamination_exception
+  - use_case_promotion_exception
 requires_guardian_review: true
-requires_human_approval: true
 secondary_hooks:
   - governance-review
   - registry-maintenance-review
@@ -37,8 +41,43 @@ forbidden_actions:
   - collapse_esthetix_estrix_shines_somatch_layers
   - promote_l4_to_l2_without_classification
   - treat_application_logic_as_core_without_review
+  - describe_estrix_as_somatch_only
+  - describe_estrix_as_shines_only
+  - describe_estrix_as_beauty_only
+  - treat_somatch_as_esthetix
+allowed_actions:
+  - classify_business_context_layer
+  - identify_layer_contamination
+  - propose_l2_l3_l4_split
+  - recommend_use_case_promotion
+  - require_guardian_review_for_boundary_change
+  - require_human_approval_for_architecture_redefinition
+evidence_required:
+  - frontmatter_schema_validation
+  - related_files_path_check
+  - guardian_review_record
+  - ci_validation_result
+  - worm_activation_record
+  - human_approval_record
 rollback_required: true
 canary_required: false
+related_files:
+  - README.md
+  - AGENTS.md
+  - agents/00_command/K_COMMAND_CENTER.md
+  - agents/10_esthetix_arsenal/ESTHETIX_ARSENAL_CONTEXT.md
+  - agents/10_esthetix_arsenal/ESTHETIX_GOVERNANCE_OS.md
+  - agents/20_estrix_core/ESTRIX_CORE_ENGINE_CONTEXT.md
+  - agents/20_estrix_core/ESTRIX_EXTENSION_POLICY.md
+  - agents/20_estrix_core/ESTRIX_MODULE_REGISTRY.md
+  - agents/20_estrix_core/ESTRIX_USE_CASE_REGISTRY.md
+  - agents/30_applications/shines_field/SHINES_FIELD_CONTEXT.md
+  - agents/30_applications/somatch_service_brand/SOMATCH_SERVICE_BRAND_CONTEXT.md
+  - agents/agent-registry/frontmatter-schema/frontmatter-schema.md
+  - agents/agent-registry/agent-router/agent-router.md
+  - agents/agent-registry/risk-level-map/risk-level-map.md
+  - agents/agent-registry/secondary-hooks-map/secondary-hooks-map.md
+  - agents/governance/pr-ci-validation-checklist/pr-ci-validation-checklist.md
 exemption_reason: business_architecture_policy_only_no_direct_production_execution
 exemption_scope:
   - canary_not_required_for_non_release_policy
@@ -396,3 +435,54 @@ then it belongs to:
 
 ```text
 L2｜ESTRIX Core CRM / Retention Module
+```
+---
+
+## 8. HOLD and BLOCK Conditions
+
+Return `HOLD` when:
+
+- the correct business context layer is unclear;
+- a requirement may belong to both L2 and L3;
+- a one-time L4 deliverable appears reusable but lacks promotion evidence;
+- SoMatch, SHINES, ESTRIX or Esthetix boundaries are ambiguous;
+- related source files conflict;
+- the proposed file path does not match the business layer;
+- the requirement may contaminate ESTRIX Core with application-specific logic.
+
+Return `BLOCK` when:
+
+- Codex is asked to redefine Esthetix, ESTRIX, SHINES or SoMatch without review;
+- ESTRIX is described as SoMatch-only, SHINES-only or beauty-only;
+- SoMatch is treated as Esthetix itself;
+- SHINES is treated as the full boundary of ESTRIX;
+- L4 project output is promoted directly into L2 Core without classification;
+- application-specific brand language is added into ESTRIX Core as system architecture;
+- K / CEO approval, Guardian Review or required governance review is bypassed.
+
+---
+
+## 9. Required Classification Output
+
+For Esthetix / ESTRIX / SHINES / SoMatch related tasks, Codex should output:
+
+```text
+Business Architecture Classification:
+- Proposed Layer:
+- Reason:
+- Is this reusable?
+- Is this application-specific?
+- Is this one-time delivery?
+- Core Contamination Risk:
+- Use Case Promotion Opportunity:
+- Required Review:
+- Router Decision:
+```
+---
+
+## 10. Final Rule
+
+> The business architecture must be classified before execution.  
+> A brand cannot redefine the engine.  
+> A field operation cannot define the company.  
+> A one-time project cannot silently become core architecture.
