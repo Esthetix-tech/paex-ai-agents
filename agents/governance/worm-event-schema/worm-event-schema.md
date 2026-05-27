@@ -1,6 +1,6 @@
 ---
 name: WORM Event Schema
-title: PACE-AI WORM Event Schema
+title: PAEX-AI WORM Event Schema
 description: Immutable governance event schema for recording high-risk decisions, Guardian vetoes, Human Overrides, Kill Switch actions, Canary releases, funding events, agent changes and audit-critical governance actions.
 layer: governance
 pace_layer: Global Governance / Platform Audit
@@ -28,17 +28,17 @@ related_files:
   - agent-registry/risk-level-map.md
 ---
 
-# PACE-AI WORM Event Schema
+# PAEX-AI WORM Event Schema
 
 ## 1. Purpose
 
-This file defines the canonical WORM Event Schema for PACE-AI Enterprise Governance OS.
+This file defines the canonical WORM Event Schema for PAEX-AI Enterprise Governance OS.
 
 WORM means:
 
 > Write Once, Read Many.
 
-In PACE-AI, WORM is not a normal system log.  
+In PAEX-AI, WORM is not a normal system log.  
 It is the immutable governance record layer for high-risk authority, professional vetoes, human overrides, funding decisions, Kill Switch actions, Canary releases, agent permission changes, policy changes, incident decisions and production-critical governance events.
 
 Core rule:
@@ -62,7 +62,7 @@ It answers:
 - Was Kill Switch available?
 - Can this decision survive audit, appeal and postmortem review?
 
-WORM is the truth ledger of PACE-AI.
+WORM is the truth ledger of PAEX-AI.
 
 ---
 
@@ -85,7 +85,7 @@ Its function is to provide the mandatory event schema for audit-critical governa
 - Cross-domain War Room incidents.
 - Quarantine restoration of High / Critical artifacts.
 
-In the PACE model:
+In the PAEX model:
 
 | Layer | Relationship to WORM |
 |---|---|
