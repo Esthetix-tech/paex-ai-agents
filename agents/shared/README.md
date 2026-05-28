@@ -1,17 +1,12 @@
-
----
-
-# 2. `shared/README.md`
-
-```markdown
 ---
 name: shared-readme
-title: PACE-AI Shared README
-description: Defines the purpose, boundaries and routing restrictions of the shared folder for reusable templates, snippets, vocabulary and non-agent supporting materials.
+title: PAEX-AI Shared README
+description: Draft README defining the purpose, boundaries and routing restrictions for shared repository support materials.
 layer: shared
+context_layer: Repository Governance
 pace_layer: Repository Governance / Shared Support
-risk_level: medium
-status: active
+risk_level: low
+status: draft
 owner: Agent Repository Steward
 review_required: true
 human_approval_required: false
@@ -19,76 +14,58 @@ codex_autofix_allowed: limited
 tool_permissions: metadata_only
 routing_enabled: false
 registry_enabled: false
-version: v1.0
-related_files:
-  - agent-registry/frontmatter-schema/frontmatter-schema.md
-  - agent-registry/registry-maintenance-policy/registry-maintenance-policy.md
-  - agent-registry/agent-router/agent-router.md
-  - agent-registry/layer-map/layer-map.md
-  - agent-registry/risk-level-map/risk-level-map.md
-  - _quarantine/quarantine-policy/quarantine-policy.md
+version: v1.0-intake-draft
+related_files: []
 ---
 
-# PACE-AI Shared README
+# PAEX-AI Shared README
 
 ## 1. Purpose
 
-The `shared/` folder stores reusable support materials for the PACE-AI Agent Repository.
+The `shared/` folder stores reusable support materials for the PAEX-AI Agent Repository.
 
-It is used for common templates, shared language, reusable snippets, vocabulary lists, formatting examples, reference fragments and non-routing support assets.
+It may contain templates, snippets, vocabulary, examples, formatting fragments and non-agent reference materials.
 
 Core rule:
 
 > `shared/` supports agents, protocols and governance files. It does not become an agent, governance authority or router target by itself.
 
-This folder is a shared toolbox, not an operating role.
-
----
-
-## 2. What Belongs in `shared/`
+## 2. Allowed Materials
 
 The following materials may be stored in `shared/`:
 
-- Common markdown templates.
-- Reusable YAML frontmatter examples.
-- Shared terminology lists.
-- Naming conventions.
-- Standard output snippets.
-- Decision package templates.
-- Review checklist fragments.
-- Prompt section fragments.
-- Common glossary files.
-- Style conventions.
-- Documentation fragments used across multiple agents.
-- Non-sensitive examples for testing formatting.
-- Common tables used by multiple files.
-- Reusable Codex instruction fragments.
-- Standard final definition blocks.
-- Standard Codex handling rule blocks.
-- Common risk vocabulary.
-- Common status vocabulary.
-- Common routing examples.
-- Non-authoritative example outputs.
+- markdown templates;
+- frontmatter examples;
+- shared terminology lists;
+- naming conventions;
+- standard output snippets;
+- decision package templates;
+- review checklist fragments;
+- prompt section fragments;
+- glossary files;
+- documentation fragments used by multiple agents;
+- non-sensitive formatting examples.
 
-Example structure:
+## 3. Governance Boundary
 
-```text
-shared/
-├─ templates/
-│  ├─ agent-role-spec-template.md
-│  ├─ governance-protocol-template.md
-│  ├─ sovereign-playbook-template.md
-│  └─ decision-output-template.md
-├─ glossary/
-│  ├─ pace-terms.md
-│  ├─ risk-terms.md
-│  └─ governance-terms.md
-├─ snippets/
-│  ├─ codex-handling-rules.md
-│  ├─ final-definition-block.md
-│  ├─ worm-required-notice.md
-│  └─ guardian-review-required-notice.md
-└─ examples/
-   ├─ frontmatter-example.md
-   ├─ review-output-example.md
-   └─ decision-package-example.md
+Files in `shared/` must not be routed as execution agents.
+
+Files in `shared/` must not grant routing authority.
+
+Files in `shared/` must not expand tool permissions.
+
+Files in `shared/` must not authorize production execution.
+
+Files in `shared/` must not publish external content without human review.
+
+## 4. Intake Status
+
+This file is part of Phase 1 Low-risk / Documentation Agent Intake.
+
+It is a draft documentation support file.
+
+It is not active.
+
+It is not a routing target.
+
+It does not grant production execution permission.

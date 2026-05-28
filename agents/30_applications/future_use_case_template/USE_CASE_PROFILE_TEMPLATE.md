@@ -1,30 +1,22 @@
----
-name: Use Case Profile Template
+﻿---
+name: use-case-profile-template
 title: Use Case Profile Template
-description: Template for registering, describing and governing a new ESTRIX-powered application or use case.
+description: Draft template for describing and governing a new ESTRIX-powered application or use case during intake.
 layer: L3
 context_layer: Application / Use Case Layer
 pace_layer: Business Architecture / Use Case Template
 risk_level: medium
-status: template
-owner: ESTRIX Core Steward
+status: draft
+owner: Agent Repository Steward
 review_required: true
 human_approval_required: false
 codex_autofix_allowed: limited
 tool_permissions: metadata_only
 routing_enabled: false
 registry_enabled: false
-version: v1.0
-related_files:
-  - ../../00_command/K_COMMAND_CENTER.md
-  - ../../10_esthetix_arsenal/ESTHETIX_ARSENAL_CONTEXT.md
-  - ../../20_estrix_core/ESTRIX_CORE_ENGINE_CONTEXT.md
-  - ../../20_estrix_core/ESTRIX_EXTENSION_POLICY.md
-  - ../../20_estrix_core/ESTRIX_MODULE_REGISTRY.md
-  - ../../20_estrix_core/ESTRIX_USE_CASE_REGISTRY.md
-  - AGENTS.md
+version: v1.0-intake-draft
+related_files: []
 ---
-
 # Use Case Profile Template
 
 ## 1. Purpose
@@ -54,3 +46,4 @@ This file should be copied when creating a new folder under:
 
 ```text
 /agents/30_applications/<new_use_case_slug>/
+```
