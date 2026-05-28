@@ -26,7 +26,7 @@ related_files:
   - ../../sovereign/governance-protocols-index/governance-protocols-index.md
   - ../../_quarantine/quarantine-policy/quarantine-policy.md
 context_layer: Repository Governance
-status: active_candidate
+status: active
 requires_worm: true
 requires_guardian_review: true
 requires_human_approval: true

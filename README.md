@@ -6,7 +6,7 @@ layer: governance
 context_layer: Repository Governance
 pace_layer: Repository Governance / Global Overview
 risk_level: high
-status: active_candidate
+status: active
 owner: Agent Repository Steward
 review_required: true
 human_approval_required: true

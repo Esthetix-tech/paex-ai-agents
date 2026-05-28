@@ -6,7 +6,7 @@ layer: sovereign
 context_layer: Repository Governance
 pace_layer: Sovereign / Governance Protocol Index
 risk_level: high
-status: active_candidate
+status: active
 owner: Sovereign Governance Office
 review_required: true
 human_approval_required: true

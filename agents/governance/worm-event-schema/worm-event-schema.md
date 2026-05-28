@@ -6,7 +6,7 @@ layer: governance
 context_layer: Repository Governance
 pace_layer: Repository Governance / WORM Event Schema
 risk_level: critical
-status: active_candidate
+status: active
 owner: Sovereign Governance Office
 review_required: true
 human_approval_required: true

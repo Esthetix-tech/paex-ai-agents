@@ -6,7 +6,7 @@ layer: governance
 context_layer: Repository Governance
 pace_layer: Repository Governance / Global Agent Operating Instruction
 risk_level: high
-status: active_candidate
+status: active
 owner: Esthetix / PAEX-AI Governance Layer
 review_required: true
 human_approval_required: true

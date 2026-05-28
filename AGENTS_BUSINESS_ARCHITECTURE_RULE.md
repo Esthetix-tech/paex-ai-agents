@@ -6,7 +6,7 @@ layer: governance
 context_layer: Repository Governance
 pace_layer: Repository Governance / Business Architecture Context Stack
 risk_level: high
-status: active_candidate
+status: active
 version: v1.4-lock-candidate
 owner: K / CEO
 review_required: true
