@@ -2,7 +2,7 @@
 name: agents-readme
 title: PAEX-AI Agents Repository README
 description: Root-level architecture and governance guide for the PAEX-AI agents repository, defining repository purpose, Business Architecture Context Stack, C-A-E-P agent layers, routing principles, frontmatter discipline, risk classification, secondary hooks, quarantine policy, PR / CI validation and v1.4 activation rules.
-layer: agent-registry
+layer: governance
 context_layer: Repository Governance
 pace_layer: Repository Governance / Global Overview
 risk_level: high
@@ -20,14 +20,15 @@ human_approval_scope:
 codex_autofix_allowed: limited
 tool_permissions: metadata_only
 routing_enabled: false
-registry_enabled: false
-version: v1.4-candidate-patch-01
+registry_enabled: true
+version: v1.4-lock-candidate
 requires_worm: true
 worm_scope:
   - readme_activation
   - repository_governance_baseline_change
   - v1_4_activation
   - architecture_layer_change
+  - routing_policy_reference_change
 requires_guardian_review: true
 secondary_hooks:
   - registry-maintenance-review
@@ -42,28 +43,45 @@ forbidden_actions:
   - bypass_risk_level_map
   - bypass_secondary_hooks_map
   - bypass_pr_ci_validation_checklist
+allowed_actions:
+  - explain_repository_structure
+  - summarize_governance_baseline
+  - reference_canonical_registry_files
+  - guide_repository_onboarding
+  - identify_governance_dependency
+  - require_ci_validation_for_activation
+evidence_required:
+  - frontmatter_schema_validation
+  - related_files_path_check
+  - markdown_structure_check
+  - companion_governance_files_check
+  - ci_validation_result
+  - guardian_review_record
+  - worm_activation_record
+  - human_approval_record
 rollback_required: true
 canary_required: false
 related_files:
   - AGENTS_BUSINESS_ARCHITECTURE_RULE.md
-  - 00_command/K_COMMAND_CENTER.md
-  - 10_esthetix_arsenal/ESTHETIX_ARSENAL_CONTEXT.md
-  - 10_esthetix_arsenal/ESTHETIX_GOVERNANCE_OS.md
-  - 20_estrix_core/ESTRIX_CORE_ENGINE_CONTEXT.md
-  - 20_estrix_core/ESTRIX_EXTENSION_POLICY.md
-  - 20_estrix_core/ESTRIX_MODULE_REGISTRY.md
-  - 20_estrix_core/ESTRIX_USE_CASE_REGISTRY.md
-  - agent-registry/frontmatter-schema/frontmatter-schema.md
-  - agent-registry/registry-maintenance-policy/registry-maintenance-policy.md
-  - agent-registry/agent-router/agent-router.md
-  - agent-registry/layer-map/layer-map.md
-  - agent-registry/risk-level-map/risk-level-map.md
-  - agent-registry/secondary-hooks-map/secondary-hooks-map.md
-  - governance/core-governance-protocols/core-governance-protocols.md
-  - governance/pr-ci-validation-checklist/pr-ci-validation-checklist.md
-  - governance/worm-event-schema/worm-event-schema.md
-  - sovereign/governance-protocols-index/governance-protocols-index.md
-  - _quarantine/quarantine-policy/quarantine-policy.md
+  - AGENTS.md
+  - agents/00_command/K_COMMAND_CENTER.md
+  - agents/10_esthetix_arsenal/ESTHETIX_ARSENAL_CONTEXT.md
+  - agents/10_esthetix_arsenal/ESTHETIX_GOVERNANCE_OS.md
+  - agents/20_estrix_core/ESTRIX_CORE_ENGINE_CONTEXT.md
+  - agents/20_estrix_core/ESTRIX_EXTENSION_POLICY.md
+  - agents/20_estrix_core/ESTRIX_MODULE_REGISTRY.md
+  - agents/20_estrix_core/ESTRIX_USE_CASE_REGISTRY.md
+  - agents/agent-registry/frontmatter-schema/frontmatter-schema.md
+  - agents/agent-registry/registry-maintenance-policy/registry-maintenance-policy.md
+  - agents/agent-registry/agent-router/agent-router.md
+  - agents/agent-registry/layer-map/layer-map.md
+  - agents/agent-registry/risk-level-map/risk-level-map.md
+  - agents/agent-registry/secondary-hooks-map/secondary-hooks-map.md
+  - agents/governance/core-governance-protocols/core-governance-protocols.md
+  - agents/governance/pr-ci-validation-checklist/pr-ci-validation-checklist.md
+  - agents/governance/worm-event-schema/worm-event-schema.md
+  - agents/sovereign/governance-protocols-index/governance-protocols-index.md
+  - agents/_quarantine/quarantine-policy/quarantine-policy.md
 exemption_reason: repository_readme_only_no_direct_production_execution
 exemption_scope:
   - canary_not_required_for_non_release_documentation_policy
@@ -72,6 +90,8 @@ delegated_reviewer: Agent Repository Steward
 exemption_review_required: true
 exemption_review_date: 2026-05-26
 ---
+
+This README may be indexed as a governance overview file, but it must not be routed as an execution Agent.
 
 # PAEX-AI Agents Repository
 
@@ -189,8 +209,489 @@ Human decision before irreversible action.
 Evidence before completion.
 Reusable core before application duplication.
 Company-wide interest before local optimization.
-
 ```
+
+## 3. Business Architecture Context Stack
+
+The Business Architecture Context Stack classifies every Esthetix / ESTRIX / SHINES / SoMatch request into L0 to L4 before routing, implementation, documentation, refactoring or execution.
+
+The purpose of this stack is to prevent Codex and repository agents from mixing company-level strategy, reusable core engine logic, application-specific packaging and one-time project delivery.
+
+The canonical rule is `AGENTS_BUSINESS_ARCHITECTURE_RULE.md`.
+
+```text
+L0｜K Command Layer
+L1｜Esthetix Arsenal Layer
+L2｜ESTRIX Core Engine Layer
+L3｜Application / Use Case Layer
+L4｜Engagement / Project Layer
+```
+
+### 3.1 L0｜K Command Layer
+
+L0 contains K / CEO final decision authority, company-level principles, non-delegable decisions, business model direction and irreversible company-level approval boundaries.
+
+Use L0 when a task involves company positioning, ownership relationships, external business model activation, high-risk partnership decisions, public positioning changes or final executive approval.
+
+Codex may prepare analysis, options, risk maps and decision packages for L0 work. Codex must not replace K / CEO final decision authority.
+
+### 3.2 L1｜Esthetix Arsenal Layer
+
+L1 defines Esthetix as the arsenal, R&D company and enterprise AI / SaaS engine builder.
+
+Use L1 when a task involves Esthetix company strategy, PAEX-AI governance, Agent Engine operations, enterprise infrastructure, data governance, internal control, audit architecture or reusable AI operating capability.
+
+Esthetix must not be reduced to SoMatch, SHINES, a beauty-only company or a one-time service operation.
+
+### 3.3 L2｜ESTRIX Core Engine Layer
+
+L2 defines ESTRIX as the reusable core operating engine built by Esthetix.
+
+Use L2 when a task involves reusable capabilities such as CRM, booking, scheduling, billing, dashboard, notification, permission, audit log, workflow automation, reusable schema, reusable state machine, API design or Agent workflow logic.
+
+ESTRIX is not SHINES-specific, not SoMatch-specific and not beauty-industry-specific.
+
+### 3.4 L3｜Application / Use Case Layer
+
+L3 defines specific applications, brands, service models, industry scenarios or use-case configurations powered by ESTRIX.
+
+Use L3 when a task involves SHINES field workflows, SoMatch service packaging, customer-facing language, industry-specific SOPs, application-level onboarding, use-case-specific templates or brand voice.
+
+L3 may configure and package ESTRIX Core capabilities. L3 must not redefine ESTRIX Core.
+
+### 3.5 L4｜Engagement / Project Layer
+
+L4 defines one-time projects, client tasks, sprints, campaigns, MVP drafts, monthly reports, proposals, implementation checklists or temporary delivery artifacts.
+
+Use L4 when the work is client-specific, version-specific, time-bound or non-reusable.
+
+If an L4 deliverable reveals a reusable pattern, Codex should propose promotion to L3, L2, L1, shared templates, registry rules or governance protocols. Codex must not silently promote L4 work into L2 Core.
+
+### 3.6 Context Stack HOLD Rule
+
+Return `HOLD` when the correct business context layer is unclear, when a requirement may belong to both L2 and L3, when a one-time L4 artifact appears reusable but lacks promotion evidence, or when Esthetix / ESTRIX / SHINES / SoMatch boundaries are ambiguous.
+
+Codex may continue draft-only analysis under the safest temporary classification, but must not execute, route or activate until classification is safe.
+
+---
+
+## 4. Repository Architecture
+
+The repository is organized as a governed authority system. Each folder has a specific function and must not be treated as interchangeable.
+
+Root-level files define the global operating frame for the repository. These include repository-level operating instructions, business architecture rules and the README overview.
+
+```text
+AGENTS.md
+README.md
+AGENTS_BUSINESS_ARCHITECTURE_RULE.md
+```
+
+The `agents/` folder contains the formal Agent operating library and governance materials.
+
+```text
+agents/
+├─ 00_command/
+├─ 10_esthetix_arsenal/
+├─ 20_estrix_core/
+├─ 30_applications/
+├─ 40_engagements/
+├─ agent-registry/
+├─ governance/
+├─ core/
+├─ guardian/
+├─ mission/
+├─ platform/
+├─ sovereign/
+├─ shared/
+└─ _quarantine/
+```
+
+### 4.1 Command and Business Context Folders
+
+`00_command/` contains K / CEO command context and final decision authority references.
+
+`10_esthetix_arsenal/` contains Esthetix company-level R&D, governance and AI operating system context.
+
+`20_estrix_core/` contains reusable ESTRIX Core Engine definitions, extension policy, module registry and use-case registry.
+
+`30_applications/` contains application-level or use-case-level contexts such as SHINES Field and SoMatch Service Brand.
+
+`40_engagements/` contains one-time project, sprint, campaign, client or MVP delivery contexts.
+
+### 4.2 Governance and Registry Folders
+
+`agent-registry/` contains metadata, schema, router, responsibility, capability, layer, risk and hook control files. Registry files describe authority and routing. They are not execution agents.
+
+`governance/` contains operating protocols such as PR / CI validation, WORM event schema, production readiness, Guardian review, kill-switch, canary and human override controls.
+
+`_quarantine/` contains unsafe, ambiguous, duplicated, incomplete or mismatched files that must not be routed as active until restoration requirements are met.
+
+### 4.3 Agent Function Folders
+
+`core/` contains Core Strategy agents for strategy, portfolio, product direction, revenue intelligence and executive coordination.
+
+`mission/` contains execution agents for engineering, marketing, sales, support, product, operations and delivery work.
+
+`guardian/` contains review, audit, compliance, security, finance, brand, reliability and risk agents.
+
+`platform/` contains reusable infrastructure agents for data, tools, DevOps, SRE, identity, document automation, reporting and workflow support.
+
+`sovereign/` contains company-level arbitration, escalation and decision package materials. Sovereign files prepare decisions; they must not directly execute irreversible company actions.
+
+`shared/` contains reusable templates, examples, snippets, vocabulary and non-agent support assets. Shared files must not be routed as active execution targets.
+
+---
+
+## 5. C-A-E-P Agent Layer Structure
+
+PAEX-AI separates agent authority through the C-A-E-P model.
+
+```text
+C｜Core Strategy
+A｜Mission
+E｜Guardian
+P｜Platform
+```
+
+This separation prevents one agent from becoming executor, reviewer, auditor and approver at the same time.
+
+### 5.1 C｜Core Strategy
+
+Core Strategy agents support strategic analysis, portfolio judgment, product direction, market entry, revenue intelligence, executive coordination and decision packaging.
+
+Core Strategy agents may recommend actions and prepare decision materials. They must not directly execute irreversible company-level actions.
+
+### 5.2 A｜Mission
+
+Mission agents execute operational, engineering, marketing, sales, support, product, project or content work.
+
+Mission agents may create deliverables and implement approved work. They must not self-approve High or Critical work, bypass Guardian Review, claim final approval authority or ignore required hooks.
+
+### 5.3 E｜Guardian
+
+Guardian agents review, verify, audit, veto, enforce standards, identify risks and require evidence.
+
+Guardian agents must not become hidden execution agents. If a Guardian appears to execute production work, Codex must trigger Guardian Purity Audit.
+
+### 5.4 P｜Platform
+
+Platform agents provide reusable infrastructure, tooling, data pipelines, reliability support, WORM logging, Oracle verification, CI support, knowledge systems, identity systems and workflow foundations.
+
+Platform agents provide the road. They do not decide the final business destination.
+
+### 5.5 Sovereign Boundary
+
+Sovereign is not a normal execution layer.
+
+Sovereign handles company-level arbitration, Principle 0 conflicts, irreversible escalation, Kill Switch release packages, Human Override packages and final decision packages.
+
+Sovereign may prepare and escalate decisions. Sovereign must not directly execute irreversible company-level actions.
+
+---
+
+## 6. Routing and Registry Principles
+
+Routing must be based on capability, authority, risk, status, tool permissions, business context layer and required hooks.
+
+Capability match alone is not enough.
+
+Before routing any Medium, High or Critical task, Codex must align with the canonical registry files:
+
+```text
+agents/agent-registry/agent-router/agent-router.md
+agents/agent-registry/risk-level-map/risk-level-map.md
+agents/agent-registry/secondary-hooks-map/secondary-hooks-map.md
+agents/agent-registry/frontmatter-schema/frontmatter-schema.md
+agents/agent-registry/registry-maintenance-policy/registry-maintenance-policy.md
+agents/_quarantine/quarantine-policy/quarantine-policy.md
+```
+
+Routing must answer:
+
+```text
+Who can do this?
+Who may do this?
+Who must review this?
+What evidence is required?
+What must be logged?
+What must not be automated?
+```
+
+Allowed router decisions are:
+
+```text
+PROCEED
+HOLD
+BLOCK
+ESCALATE
+```
+
+Use `PROCEED` only when the risk is controlled and required hooks exist.
+
+Use `HOLD` when more evidence, approval, review, classification or repair is needed.
+
+Use `BLOCK` when the action violates governance, law, safety, privacy, security, quarantine or authority boundaries.
+
+Use `ESCALATE` when K / CEO, Sovereign or an authorized human owner must decide.
+
+Registry files are the source of truth for routing and authority. If the registry and file content conflict, return `HOLD` until the conflict is repaired.
+
+---
+
+## 7. Frontmatter Discipline
+
+Every governed Agent, registry, governance or protocol file should contain valid YAML frontmatter.
+
+Frontmatter defines file identity, ownership, layer, risk, status, routing eligibility, tool permissions, registry behavior and governance controls.
+
+Minimum recommended fields include:
+
+```yaml
+---
+name:
+title:
+description:
+layer:
+context_layer:
+pace_layer:
+risk_level:
+status:
+owner:
+review_required:
+human_approval_required:
+codex_autofix_allowed:
+tool_permissions:
+routing_enabled:
+registry_enabled:
+version:
+related_files:
+---
+```
+
+High-risk or Critical files should also include:
+
+```yaml
+requires_worm: true
+requires_guardian_review: true
+requires_human_approval: true
+human_approval_scope:
+  - ...
+worm_scope:
+  - ...
+secondary_hooks:
+  - ...
+forbidden_actions:
+  - ...
+allowed_actions:
+  - ...
+evidence_required:
+  - ...
+rollback_required: true
+canary_required: true
+```
+
+`human_approval_required` is the lifecycle-level activation or execution approval flag.
+
+`requires_human_approval` is the High / Critical governance control flag.
+
+For High / Critical files, both should be aligned unless an explicit exemption is documented.
+
+Duplicate frontmatter keys must fail validation because duplicated metadata may create inconsistent routing, lifecycle, permission or risk interpretation.
+
+Invalid enum values, missing required fields, broken required `related_files`, unsafe routing flags, missing High / Critical controls and frontmatter-content conflicts must return `FAIL` or `HOLD` according to the PR / CI validation checklist.
+
+Frontmatter must not invent authority. If frontmatter grants authority contradicted by governance or content, Codex must return `HOLD` and recommend correction.
+
+---
+
+## 8. Risk Classification and Secondary Hooks
+
+Risk classification determines how much review, evidence, approval, logging and escalation a task requires.
+
+The canonical source for risk classification is:
+
+```text
+agents/agent-registry/risk-level-map/risk-level-map.md
+```
+
+The canonical source for mandatory hooks is:
+
+```text
+agents/agent-registry/secondary-hooks-map/secondary-hooks-map.md
+```
+
+Risk levels are:
+
+| Risk     | Meaning                                                                                                             | Default Handling                                               |
+| -------- | ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| Low      | Reversible, local, non-sensitive, non-production work                                                               | Proceed with basic self-check                                  |
+| Medium   | Normal operational work with limited blast radius                                                                   | Proceed with validation note and review awareness              |
+| High     | Sensitive, external, production-adjacent, financial, legal, brand, data or permission impact                        | Require hooks, Guardian note, rollback and WORM consideration  |
+| Critical | Irreversible or materially consequential legal, financial, security, production, ledger, payment or identity impact | No autonomous execution; prepare decision package and escalate |
+| Blocked  | Unsafe, unlawful, contradictory, quarantined or missing authority                                                   | Block execution                                                |
+| TBD      | Risk cannot be determined with available evidence                                                                   | HOLD until classified                                          |
+
+When risk is unclear, classify upward.
+
+Secondary hooks may include Guardian Review, WORM Event, Canary, Human Approval, Sovereign Package, Kill Switch, Oracle Verification, Data Boundary Review, Rollback Plan, Counter-Metrics, Quarantine Review, Guardian Purity Audit, Core Contamination Check, Tool Permission Review and Production Readiness Gate.
+
+If one task touches multiple triggers, Codex must attach the strictest combined hook set. Codex must not choose only the easiest hook.
+
+---
+
+## 9. Quarantine Policy
+
+Unsafe, ambiguous, duplicated, incomplete or mismatched files must not be routed as active.
+
+The canonical quarantine policy is:
+
+```text
+agents/_quarantine/quarantine-policy/quarantine-policy.md
+```
+
+Use quarantine when a file has missing frontmatter, wrong layer, unclear risk level, unsafe permissions, duplicate responsibility, content mismatch, pending human review, unclear routing target, Guardian purity issue, Sovereign boundary issue, Core contamination or active reference conflict.
+
+Quarantined files must use safe isolation settings:
+
+```yaml
+status: quarantined
+routing_enabled: false
+tool_permissions: none
+registry_enabled: false
+```
+
+Quarantined files must not be listed as active routing targets, granted tool permissions, referenced as active dependencies or restored without required review.
+
+Restoration requires resolved quarantine reason, corrected frontmatter, valid path-layer mapping, assigned risk level, safe tool permissions, correct routing status, resolved duplicate responsibility, registry update, related files update and PR / CI validation.
+
+Medium+ restoration requires human review.
+
+High / Critical restoration requires Guardian Review and WORM-style record.
+
+Plain-language rule:
+
+> Quarantine is not deletion.
+> Quarantine is a safety buffer that prevents uncertain files from becoming active authority.
+
+---
+
+## 10. PR / CI Validation Rules
+
+The canonical PR / CI validation source is:
+
+```text
+agents/governance/pr-ci-validation-checklist/pr-ci-validation-checklist.md
+```
+
+Before any repository governance change is considered ready, the change must pass or explicitly resolve required PR / CI checks.
+
+Required validation categories include:
+
+* frontmatter exists;
+* required fields are present;
+* enum values are valid;
+* duplicate frontmatter keys are absent;
+* path matches layer;
+* risk level is present;
+* High / Critical hooks are present;
+* routing flags are valid;
+* shared files are non-routable;
+* quarantine files are non-routable;
+* Guardian purity is preserved;
+* Mission does not self-approve High / Critical work;
+* Sovereign does not directly execute irreversible work;
+* registry files are not treated as execution agents;
+* L2 Core contamination is checked;
+* L3 does not redefine ESTRIX;
+* L4 does not redefine architecture;
+* quarantine restoration is reviewed;
+* related files exist;
+* duplicate responsibility is scanned;
+* version lifecycle is valid;
+* context layer is present;
+* tool permissions are valid;
+* companion governance files are synchronized.
+
+Mechanical validation may return `FAIL` for deterministic errors such as missing frontmatter, invalid enum values, broken required paths, duplicate keys, unsafe routing flags or missing High / Critical controls.
+
+Semantic ambiguity should return `HOLD`.
+
+High / Critical governance changes require human approval, Guardian Review and WORM evidence where applicable.
+
+---
+
+## 11. v1.4 Activation Gate
+
+The repository may be treated as v1.4-ready only when the core governance baseline is present, synchronized, validated and approved.
+
+The minimum companion files include:
+
+```text
+AGENTS.md
+README.md
+AGENTS_BUSINESS_ARCHITECTURE_RULE.md
+agents/agent-registry/frontmatter-schema/frontmatter-schema.md
+agents/agent-registry/agent-router/agent-router.md
+agents/agent-registry/risk-level-map/risk-level-map.md
+agents/agent-registry/secondary-hooks-map/secondary-hooks-map.md
+agents/agent-registry/registry-maintenance-policy/registry-maintenance-policy.md
+agents/_quarantine/quarantine-policy/quarantine-policy.md
+agents/governance/pr-ci-validation-checklist/pr-ci-validation-checklist.md
+```
+
+v1.4 activation requires:
+
+* frontmatter schema validation;
+* router consistency check;
+* risk-level map alignment;
+* secondary hooks map alignment;
+* quarantine policy alignment;
+* PR / CI validation;
+* related files path validation;
+* duplicate frontmatter key check;
+* companion governance file synchronization;
+* Guardian Review;
+* WORM activation record;
+* K / CEO or delegated authorized reviewer approval.
+
+This README may summarize the governance baseline, but it does not override canonical governance files.
+
+If this README conflicts with `AGENTS.md`, `AGENTS_BUSINESS_ARCHITECTURE_RULE.md`, `agent-router.md`, `risk-level-map.md`, `secondary-hooks-map.md`, `frontmatter-schema.md`, `registry-maintenance-policy.md`, `quarantine-policy.md` or `pr-ci-validation-checklist.md`, Codex must return `HOLD` and require governance synchronization.
+
+Do not mark the repository as v1.4 active if companion files are missing, broken, stale, unsynchronized or unapproved.
+
+---
+
+## 12. Final Rule
+
+The `agents/` repository is an authority system, not a prompt warehouse.
+
+Every governed file must have a clear identity, boundary, owner, risk level, routing status, tool permission scope, registry relationship and review requirement.
+
+Codex must classify before routing, route before execution, attach hooks before high-risk action, record before release, use Canary before scale, require human decision before irreversible action and require evidence before completion.
+
+A capable Agent is not automatically an authorized Agent.
+
+A fast implementation is not automatically a safe implementation.
+
+A completed task is not automatically an audited task.
+
+A reusable engine must not be trapped inside one application.
+
+A brand service package must not redefine the core engine.
+
+A quarantined file must not become active authority.
+
+Final doctrine:
+
+> PAEX-AI exists to make Esthetix faster, safer, clearer, more auditable and more scalable.
+> It must never make Esthetix faster by making responsibility disappear.
+
+
+---
+
+
 agents
 ├─ 00_command
 │  ├─ AGENTS.md
