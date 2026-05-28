@@ -21,7 +21,7 @@ codex_autofix_allowed: limited
 tool_permissions: metadata_only
 routing_enabled: false
 registry_enabled: true
-version: v1.4-candidate-patch-02
+version: v1.4-lock-candidate
 requires_worm: true
 worm_scope:
   - file_activation
@@ -40,16 +40,35 @@ forbidden_actions:
   - allow_high_risk_without_hooks
   - classify_unknown_risk_as_low
   - lower_trigger_minimum_risk_without_evidence
+allowed_actions:
+  - define_risk_classification
+  - identify_risk_escalation_triggers
+  - require_upward_classification_when_unclear
+  - validate_risk_level_alignment
+  - document_risk_downgrade_conditions
+evidence_required:
+  - frontmatter_schema_validation
+  - related_files_path_check
+  - duplicate_frontmatter_key_check
+  - risk_trigger_alignment_check
+  - required_hooks_check
+  - ci_validation_result
+  - guardian_review_record
+  - human_approval_record
 rollback_required: true
 canary_required: false
 related_files:
+  - ../../../AGENTS.md
+  - ../../../README.md
+  - ../../../AGENTS_BUSINESS_ARCHITECTURE_RULE.md
   - ../agent-router/agent-router.md
   - ../secondary-hooks-map/secondary-hooks-map.md
   - ../frontmatter-schema/frontmatter-schema.md
   - ../registry-maintenance-policy/registry-maintenance-policy.md
   - ../../_quarantine/quarantine-policy/quarantine-policy.md
   - ../../governance/pr-ci-validation-checklist/pr-ci-validation-checklist.md
-  - ../../AGENTS_BUSINESS_ARCHITECTURE_RULE.md
+  - ../../governance/worm-event-schema/worm-event-schema.md
+  - ../../sovereign/governance-protocols-index/governance-protocols-index.md
 exemption_reason: risk_classification_policy_only_no_direct_production_execution
 exemption_scope:
   - canary_not_required_for_non_release_policy

@@ -9,11 +9,13 @@ risk_level: high
 status: active_candidate
 owner: Agent Repository Steward
 review_required: true
+human_approval_required: true
+requires_human_approval: true
 codex_autofix_allowed: limited
 tool_permissions: metadata_only
 routing_enabled: false
 registry_enabled: true
-version: v1.4-candidate-patch-03
+version: v1.4-lock-candidate
 requires_worm: true
 worm_scope:
   - activation
@@ -22,7 +24,6 @@ worm_scope:
   - forbidden_action_policy_change_request
   - quarantine_restore_review
 requires_guardian_review: true
-human_approval_required: true
 human_approval_scope:
   - file_activation
   - router_policy_change
@@ -40,16 +41,42 @@ forbidden_actions:
   - allow_mission_self_approval_for_high_or_critical_work
   - allow_guardian_hidden_production_execution
   - allow_sovereign_direct_irreversible_execution
+allowed_actions:
+  - classify_before_routing
+  - identify_required_hooks
+  - validate_routing_candidate_metadata
+  - return_hold_for_missing_evidence
+  - block_quarantined_active_routing
+evidence_required:
+  - frontmatter_schema_validation
+  - related_files_path_check
+  - duplicate_frontmatter_key_check
+  - routing_decision_trace
+  - required_hooks_check
+  - ci_validation_result
+  - guardian_review_record
+  - human_approval_record
 rollback_required: true
 canary_required: false
 related_files:
+  - ../../../AGENTS.md
+  - ../../../README.md
+  - ../../../AGENTS_BUSINESS_ARCHITECTURE_RULE.md
   - ../risk-level-map/risk-level-map.md
   - ../secondary-hooks-map/secondary-hooks-map.md
   - ../frontmatter-schema/frontmatter-schema.md
   - ../registry-maintenance-policy/registry-maintenance-policy.md
   - ../../_quarantine/quarantine-policy/quarantine-policy.md
   - ../../governance/pr-ci-validation-checklist/pr-ci-validation-checklist.md
-  - ../../AGENTS_BUSINESS_ARCHITECTURE_RULE.md
+  - ../../governance/worm-event-schema/worm-event-schema.md
+  - ../../sovereign/governance-protocols-index/governance-protocols-index.md
+exemption_reason: router_policy_only_no_direct_production_execution
+exemption_scope:
+  - canary_not_required_for_non_release_routing_policy
+exemption_approved_by: K / CEO
+delegated_reviewer: Agent Repository Steward
+exemption_review_required: true
+exemption_review_date: 2026-05-26
 ---
 
 # Agent Router｜PAEX-AI Agent Router

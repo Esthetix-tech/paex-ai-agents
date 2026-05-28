@@ -21,7 +21,7 @@ codex_autofix_allowed: limited
 tool_permissions: metadata_only
 routing_enabled: false
 registry_enabled: true
-version: v1.4-candidate-patch-03
+version: v1.4-lock-candidate
 requires_worm: true
 worm_scope:
   - policy_activation
@@ -41,16 +41,35 @@ forbidden_actions:
   - hide_quarantine_reason
   - reference_quarantined_file_as_active_target
   - grant_tool_permissions_before_restoration
+allowed_actions:
+  - define_quarantine_policy
+  - identify_quarantine_conditions
+  - validate_restoration_requirements
+  - block_active_routing_for_quarantined_files
+  - require_review_for_medium_high_or_critical_restore
+evidence_required:
+  - frontmatter_schema_validation
+  - related_files_path_check
+  - duplicate_frontmatter_key_check
+  - quarantine_reason_record
+  - restoration_review_record
+  - ci_validation_result
+  - guardian_review_record
+  - human_approval_record
 rollback_required: true
 canary_required: false
 related_files:
+  - ../../../AGENTS.md
+  - ../../../README.md
+  - ../../../AGENTS_BUSINESS_ARCHITECTURE_RULE.md
   - ../../agent-registry/frontmatter-schema/frontmatter-schema.md
   - ../../agent-registry/registry-maintenance-policy/registry-maintenance-policy.md
   - ../../agent-registry/agent-router/agent-router.md
   - ../../agent-registry/risk-level-map/risk-level-map.md
   - ../../agent-registry/secondary-hooks-map/secondary-hooks-map.md
   - ../../governance/pr-ci-validation-checklist/pr-ci-validation-checklist.md
-  - ../../AGENTS_BUSINESS_ARCHITECTURE_RULE.md
+  - ../../governance/worm-event-schema/worm-event-schema.md
+  - ../../sovereign/governance-protocols-index/governance-protocols-index.md
 exemption_reason: quarantine_policy_only_no_direct_production_execution
 exemption_scope:
   - canary_not_required_for_non_release_policy

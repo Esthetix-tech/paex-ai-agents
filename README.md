@@ -62,22 +62,13 @@ evidence_required:
 rollback_required: true
 canary_required: false
 related_files:
-  - AGENTS_BUSINESS_ARCHITECTURE_RULE.md
   - AGENTS.md
-  - agents/00_command/K_COMMAND_CENTER.md
-  - agents/10_esthetix_arsenal/ESTHETIX_ARSENAL_CONTEXT.md
-  - agents/10_esthetix_arsenal/ESTHETIX_GOVERNANCE_OS.md
-  - agents/20_estrix_core/ESTRIX_CORE_ENGINE_CONTEXT.md
-  - agents/20_estrix_core/ESTRIX_EXTENSION_POLICY.md
-  - agents/20_estrix_core/ESTRIX_MODULE_REGISTRY.md
-  - agents/20_estrix_core/ESTRIX_USE_CASE_REGISTRY.md
+  - AGENTS_BUSINESS_ARCHITECTURE_RULE.md
   - agents/agent-registry/frontmatter-schema/frontmatter-schema.md
   - agents/agent-registry/registry-maintenance-policy/registry-maintenance-policy.md
   - agents/agent-registry/agent-router/agent-router.md
-  - agents/agent-registry/layer-map/layer-map.md
   - agents/agent-registry/risk-level-map/risk-level-map.md
   - agents/agent-registry/secondary-hooks-map/secondary-hooks-map.md
-  - agents/governance/core-governance-protocols/core-governance-protocols.md
   - agents/governance/pr-ci-validation-checklist/pr-ci-validation-checklist.md
   - agents/governance/worm-event-schema/worm-event-schema.md
   - agents/sovereign/governance-protocols-index/governance-protocols-index.md
@@ -692,6 +683,7 @@ Final doctrine:
 ---
 
 
+```text
 agents
 ├─ 00_command
 │  ├─ AGENTS.md

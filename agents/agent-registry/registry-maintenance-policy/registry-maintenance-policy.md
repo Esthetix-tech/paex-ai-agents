@@ -14,19 +14,16 @@ routing_enabled: false
 registry_enabled: true
 version: v1.4-lock-candidate
 related_files:
-  - ../agent-index/agent-index.md
-  - ../agent-responsibility-matrix/agent-responsibility-matrix.md
+  - ../../../AGENTS.md
+  - ../../../README.md
+  - ../../../AGENTS_BUSINESS_ARCHITECTURE_RULE.md
   - ../agent-router/agent-router.md
-  - ../capability-map/capability-map.md
-  - ../layer-map/layer-map.md
   - ../risk-level-map/risk-level-map.md
   - ../secondary-hooks-map/secondary-hooks-map.md
   - ../frontmatter-schema/frontmatter-schema.md
-  - ../../governance/core-governance-protocols/core-governance-protocols.md
-  - ../../governance/guardian-review-coordinator/guardian-review-coordinator.md
-  - ../../governance/agent-drift-review/agent-drift-review.md
-  - ../../governance/production-readiness-gate/production-readiness-gate.md
-  - ../../_quarantine/README.md
+  - ../../governance/pr-ci-validation-checklist/pr-ci-validation-checklist.md
+  - ../../governance/worm-event-schema/worm-event-schema.md
+  - ../../sovereign/governance-protocols-index/governance-protocols-index.md
   - ../../_quarantine/quarantine-policy/quarantine-policy.md
 context_layer: Repository Governance
 status: active_candidate

@@ -21,7 +21,7 @@ codex_autofix_allowed: limited
 tool_permissions: metadata_only
 routing_enabled: false
 registry_enabled: true
-version: v1.4-candidate-patch-04
+version: v1.4-lock-candidate
 requires_worm: true
 worm_scope:
   - file_activation
@@ -40,6 +40,21 @@ forbidden_actions:
   - bypass_guardian_review
   - treat_hooks_as_optional_for_sensitive_domains
   - downgrade_hooks_because_agent_is_capable
+allowed_actions:
+  - define_secondary_hooks
+  - map_risk_triggers_to_controls
+  - require_guardian_review_for_sensitive_domains
+  - require_worm_for_auditable_actions
+  - identify_hook_inheritance_requirements
+evidence_required:
+  - frontmatter_schema_validation
+  - related_files_path_check
+  - duplicate_frontmatter_key_check
+  - hook_trigger_coverage_check
+  - risk_level_map_alignment
+  - ci_validation_result
+  - guardian_review_record
+  - human_approval_record
 rollback_required: true
 canary_required: false
 exemption_reason: secondary_hooks_policy_only_no_direct_production_execution
@@ -50,6 +65,9 @@ delegated_reviewer: Agent Repository Steward
 exemption_review_required: true
 exemption_review_date: 2026-05-26
 related_files:
+  - ../../../AGENTS.md
+  - ../../../README.md
+  - ../../../AGENTS_BUSINESS_ARCHITECTURE_RULE.md
   - ../risk-level-map/risk-level-map.md
   - ../agent-router/agent-router.md
   - ../frontmatter-schema/frontmatter-schema.md
@@ -57,7 +75,7 @@ related_files:
   - ../../_quarantine/quarantine-policy/quarantine-policy.md
   - ../../governance/pr-ci-validation-checklist/pr-ci-validation-checklist.md
   - ../../governance/worm-event-schema/worm-event-schema.md
-  - ../../AGENTS_BUSINESS_ARCHITECTURE_RULE.md
+  - ../../sovereign/governance-protocols-index/governance-protocols-index.md
 ---
 
 # Secondary Hooks Map｜PAEX-AI Secondary Hooks Map

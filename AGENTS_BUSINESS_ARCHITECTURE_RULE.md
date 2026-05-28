@@ -62,22 +62,17 @@ evidence_required:
 rollback_required: true
 canary_required: false
 related_files:
-  - README.md
   - AGENTS.md
-  - agents/00_command/K_COMMAND_CENTER.md
-  - agents/10_esthetix_arsenal/ESTHETIX_ARSENAL_CONTEXT.md
-  - agents/10_esthetix_arsenal/ESTHETIX_GOVERNANCE_OS.md
-  - agents/20_estrix_core/ESTRIX_CORE_ENGINE_CONTEXT.md
-  - agents/20_estrix_core/ESTRIX_EXTENSION_POLICY.md
-  - agents/20_estrix_core/ESTRIX_MODULE_REGISTRY.md
-  - agents/20_estrix_core/ESTRIX_USE_CASE_REGISTRY.md
-  - agents/30_applications/shines_field/SHINES_FIELD_CONTEXT.md
-  - agents/30_applications/somatch_service_brand/SOMATCH_SERVICE_BRAND_CONTEXT.md
+  - README.md
   - agents/agent-registry/frontmatter-schema/frontmatter-schema.md
   - agents/agent-registry/agent-router/agent-router.md
   - agents/agent-registry/risk-level-map/risk-level-map.md
   - agents/agent-registry/secondary-hooks-map/secondary-hooks-map.md
+  - agents/agent-registry/registry-maintenance-policy/registry-maintenance-policy.md
   - agents/governance/pr-ci-validation-checklist/pr-ci-validation-checklist.md
+  - agents/governance/worm-event-schema/worm-event-schema.md
+  - agents/sovereign/governance-protocols-index/governance-protocols-index.md
+  - agents/_quarantine/quarantine-policy/quarantine-policy.md
 exemption_reason: business_architecture_policy_only_no_direct_production_execution
 exemption_scope:
   - canary_not_required_for_non_release_policy

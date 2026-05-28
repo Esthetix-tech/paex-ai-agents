@@ -22,7 +22,7 @@ codex_autofix_allowed: limited
 tool_permissions: metadata_only
 routing_enabled: false
 registry_enabled: true
-version: v1.4-candidate-patch-03
+version: v1.4-lock-candidate
 requires_worm: true
 worm_scope:
   - checklist_activation
@@ -42,16 +42,35 @@ forbidden_actions:
   - route_quarantined_files_as_active
   - treat_warning_as_pass_for_required_checks
   - mark_active_without_dry_run
+allowed_actions:
+  - define_pr_ci_validation_checks
+  - classify_mechanical_failures
+  - classify_semantic_hold_conditions
+  - validate_v1_4_readiness
+  - require_companion_governance_synchronization
+evidence_required:
+  - frontmatter_schema_validation
+  - related_files_path_check
+  - duplicate_frontmatter_key_check
+  - markdown_structure_check
+  - companion_governance_files_check
+  - dry_run_result_record
+  - guardian_review_record
+  - human_approval_record
 rollback_required: true
 canary_required: false
 related_files:
+  - ../../../AGENTS.md
+  - ../../../README.md
+  - ../../../AGENTS_BUSINESS_ARCHITECTURE_RULE.md
   - ../../agent-registry/frontmatter-schema/frontmatter-schema.md
   - ../../agent-registry/agent-router/agent-router.md
   - ../../agent-registry/risk-level-map/risk-level-map.md
   - ../../agent-registry/secondary-hooks-map/secondary-hooks-map.md
   - ../../agent-registry/registry-maintenance-policy/registry-maintenance-policy.md
   - ../../_quarantine/quarantine-policy/quarantine-policy.md
-  - ../../AGENTS_BUSINESS_ARCHITECTURE_RULE.md
+  - ../worm-event-schema/worm-event-schema.md
+  - ../../sovereign/governance-protocols-index/governance-protocols-index.md
 exemption_reason: metadata_checklist_only_no_direct_production_execution
 exemption_scope:
   - canary_not_required_for_non_release_metadata_policy
