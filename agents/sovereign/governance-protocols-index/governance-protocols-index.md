@@ -3,38 +3,79 @@ name: Governance Protocols Index
 title: PAEX-AI Sovereign Governance Protocols Index
 description: Sovereign-level index for core governance protocols, activation orders, decision playbooks, escalation controls and company-level routing logic used by PAEX-AI Enterprise Governance OS.
 layer: sovereign
-pace_layer: C-Level / Global Governance
+context_layer: Repository Governance
+pace_layer: Sovereign / Governance Protocol Index
 risk_level: high
-status: stable
+status: active_candidate
 owner: Sovereign Governance Office
 review_required: true
 human_approval_required: true
+requires_human_approval: true
+human_approval_scope:
+  - file_activation
+  - sovereign_index_policy_change
+  - company_level_protocol_reference_change
+  - routing_policy_reference_change
+  - high_or_critical_protocol_exception
 codex_autofix_allowed: limited
 tool_permissions: metadata_only
-routing_enabled: true
+routing_enabled: false
 registry_enabled: true
-version: v1.0
+version: v1.4-lock-candidate
+requires_worm: true
+worm_scope:
+  - file_activation
+  - sovereign_index_policy_change
+  - company_level_protocol_reference_change
+  - routing_policy_reference_change
+  - high_or_critical_protocol_exception
+requires_guardian_review: true
+secondary_hooks:
+  - governance-review
+  - registry-maintenance-review
+  - ci-validation-review
+forbidden_actions:
+  - route_sovereign_index_as_execution_agent
+  - execute_irreversible_company_action_from_index
+  - bypass_sovereign_decision_playbook
+  - bypass_guardian_review_for_high_or_critical_protocol
+  - treat_index_reference_as_approval
+allowed_actions:
+  - index_governance_protocols
+  - reference_canonical_governance_files
+  - support_sovereign_decision_routing
+  - identify_protocol_dependency
+  - escalate_company_level_decision_context
+evidence_required:
+  - frontmatter_schema_validation
+  - related_files_path_check
+  - duplicate_frontmatter_key_check
+  - markdown_structure_check
+  - guardian_review_record
+  - worm_activation_record
+  - ci_validation_result
+  - human_approval_record
+rollback_required: true
+canary_required: false
 related_files:
-  - governance/core-governance-protocols.md
-  - governance/worm-event-schema.md
-  - governance/canary-release-governor.md
-  - governance/guardian-review-coordinator.md
-  - governance/human-override-accountability.md
-  - governance/kill-switch-governor.md
-  - governance/agent-drift-review.md
-  - governance/production-readiness-gate.md
-  - governance/controlled-production-activation-order.md
-  - governance/stable-controlled-activation-order.md
-  - sovereign/principle-0-charter.md
-  - sovereign/sovereign-agent.md
-  - sovereign/sovereign-decision-playbook.md
-  - sovereign/cross-domain-war-room-playbook.md
-  - sovereign/controlled-production-activation-order.md
-  - sovereign/stable-controlled-activation-order.md
-  - agent-registry/registry-maintenance-policy.md
-  - agent-registry/risk-level-map.md
-  - agent-registry/layer-map.md
-  - _quarantine/quarantine-policy.md
+  - ../../../AGENTS.md
+  - ../../../README.md
+  - ../../../AGENTS_BUSINESS_ARCHITECTURE_RULE.md
+  - ../../governance/worm-event-schema/worm-event-schema.md
+  - ../../governance/pr-ci-validation-checklist/pr-ci-validation-checklist.md
+  - ../../agent-registry/frontmatter-schema/frontmatter-schema.md
+  - ../../agent-registry/agent-router/agent-router.md
+  - ../../agent-registry/risk-level-map/risk-level-map.md
+  - ../../agent-registry/secondary-hooks-map/secondary-hooks-map.md
+  - ../../agent-registry/registry-maintenance-policy/registry-maintenance-policy.md
+  - ../../_quarantine/quarantine-policy/quarantine-policy.md
+exemption_reason: sovereign_index_reference_only_no_direct_execution
+exemption_scope:
+  - canary_not_required_for_non_release_index_policy
+exemption_approved_by: K / CEO
+delegated_reviewer: Agent Repository Steward
+exemption_review_required: true
+exemption_review_date: 2026-05-26
 ---
 
 # PAEX-AI Sovereign Governance Protocols Index
@@ -334,3 +375,4 @@ Conflict Detected
 → Route to Guardian Review if operating rule is unclear
 → Route to Sovereign Decision Playbook if company-level judgment is required
 → Update this index after resolution
+```

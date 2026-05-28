@@ -3,29 +3,79 @@ name: WORM Event Schema
 title: PAEX-AI WORM Event Schema
 description: Immutable governance event schema for recording high-risk decisions, Guardian vetoes, Human Overrides, Kill Switch actions, Canary releases, funding events, agent changes and audit-critical governance actions.
 layer: governance
-pace_layer: Global Governance / Platform Audit
+context_layer: Repository Governance
+pace_layer: Repository Governance / WORM Event Schema
 risk_level: critical
-status: stable
+status: active_candidate
 owner: Sovereign Governance Office
 review_required: true
 human_approval_required: true
+requires_human_approval: true
+human_approval_scope:
+  - file_activation
+  - worm_schema_policy_change
+  - audit_event_schema_change
+  - critical_governance_event_change
+  - high_or_critical_worm_exception
 codex_autofix_allowed: limited
 tool_permissions: metadata_only
 routing_enabled: false
 registry_enabled: true
-version: v1.0
+version: v1.4-lock-candidate
+requires_worm: true
+worm_scope:
+  - file_activation
+  - worm_schema_policy_change
+  - audit_event_schema_change
+  - critical_governance_event_change
+  - high_or_critical_worm_exception
+requires_guardian_review: true
+secondary_hooks:
+  - governance-review
+  - registry-maintenance-review
+  - ci-validation-review
+forbidden_actions:
+  - edit_worm_event_after_creation
+  - suppress_worm_for_high_or_critical_action
+  - bypass_guardian_review_for_critical_event_schema
+  - weaken_audit_event_attribution
+  - route_worm_schema_as_execution_agent
+allowed_actions:
+  - define_worm_event_schema
+  - validate_audit_event_metadata
+  - require_evidence_for_high_or_critical_actions
+  - support_governance_event_review
+  - reference_canonical_registry_controls
+evidence_required:
+  - frontmatter_schema_validation
+  - related_files_path_check
+  - duplicate_frontmatter_key_check
+  - markdown_structure_check
+  - guardian_review_record
+  - worm_activation_record
+  - ci_validation_result
+  - human_approval_record
+rollback_required: true
+canary_required: false
 related_files:
-  - governance/core-governance-protocols.md
-  - governance/guardian-review-coordinator.md
-  - governance/human-override-accountability.md
-  - governance/kill-switch-governor.md
-  - governance/canary-release-governor.md
-  - governance/agent-drift-review.md
-  - governance/production-readiness-gate.md
-  - sovereign/principle-0-charter.md
-  - sovereign/sovereign-agent.md
-  - sovereign/cross-domain-war-room-playbook.md
-  - agent-registry/risk-level-map.md
+  - ../../../AGENTS.md
+  - ../../../README.md
+  - ../../../AGENTS_BUSINESS_ARCHITECTURE_RULE.md
+  - ../../agent-registry/frontmatter-schema/frontmatter-schema.md
+  - ../../agent-registry/agent-router/agent-router.md
+  - ../../agent-registry/risk-level-map/risk-level-map.md
+  - ../../agent-registry/secondary-hooks-map/secondary-hooks-map.md
+  - ../../agent-registry/registry-maintenance-policy/registry-maintenance-policy.md
+  - ../../_quarantine/quarantine-policy/quarantine-policy.md
+  - ../pr-ci-validation-checklist/pr-ci-validation-checklist.md
+  - ../../sovereign/governance-protocols-index/governance-protocols-index.md
+exemption_reason: critical_schema_reference_only_no_direct_production_execution
+exemption_scope:
+  - canary_not_required_for_non_release_schema_policy
+exemption_approved_by: K / CEO
+delegated_reviewer: Agent Repository Steward
+exemption_review_required: true
+exemption_review_date: 2026-05-26
 ---
 
 # PAEX-AI WORM Event Schema
@@ -141,3 +191,4 @@ If the hash chain breaks, create:
 
 ```text
 WORM_INTEGRITY_ALERT
+```
