@@ -1,30 +1,88 @@
 ---
-name: Core Governance Protocols
-title: PACE-AI Core Governance Protocols
-description: Highest-level governance protocol set for PACE-AI Enterprise Governance OS, defining Principle 0, WORM Audit, Canary Release, Human Override, Kill Switch, Guardian Review, Agent Drift Review and Production Readiness rules.
+name: core-governance-protocols-support-draft
+title: Core Governance Protocols Support Draft
+description: Non-canonical governance protocol support draft for evidence preparation, governance gap review and human-reviewed remediation planning. This file does not create operating law, approval authority, activation authority or lifecycle promotion authority.
 layer: governance
-pace_layer: Global Governance
-risk_level: critical
-status: stable
-owner: Sovereign Governance Office
+context_layer: Repository Governance
+pace_layer: Governance Protocol / Evidence Preparation Intake
+risk_level: high
+critical_adjacent: true
+status: active_candidate
+owner: Agent Repository Steward
 review_required: true
 human_approval_required: true
 codex_autofix_allowed: limited
-tool_permissions: audit_and_report_only
-routing_enabled: true
+tool_permissions: metadata_only
+routing_enabled: false
 registry_enabled: true
-worm_required_for_high_risk: true
+version: v1.0
+related_files: []
+requires_guardian_review: true
+requires_worm: false
+rollback_required: false
+canary_required: false
+exemption_reason: governance_protocol_draft_only_no_execution_or_approval_authority
+exemption_review_required: true
+forbidden_actions:
+  - activate_agent_during_intake
+  - expand_routing_authority_without_review
+  - expand_tool_permissions_without_review
+  - execute_production_action
+  - create_canonical_governance_policy_without_review
+  - modify_lifecycle_status_without_approval
+  - approve_human_override_without_authority
+  - substitute_k_ceo_approval
+  - approve_activation_without_formal_review
+  - bypass_guardian_review
+  - bypass_human_approval
+  - bypass_worm_when_required
+  - treat_draft_protocol_as_canonical
+  - grant_production_readiness_without_validation
+  - modify_active_baseline_without_governance_pr
+  - claim_single_source_of_truth_without_approval
+  - define_operating_law_without_approval
+  - issue_formal_guardian_approval_without_authority
+  - authorize_lifecycle_promotion_without_approval
+allowed_actions:
+  - draft_governance_protocol_notes
+  - summarize_existing_governance_controls
+  - prepare_evidence_package
+  - identify_governance_gaps
+  - recommend_hold_or_escalation
+  - prepare_human_review_materials
+  - propose_non_canonical_remediation_options
+evidence_required:
+  - source_files_reviewed
+  - baseline_status_snapshot
+  - governance_policy_reference
+  - non_canonical_boundary_statement
+  - risk_assessment_notes
+  - approval_boundary_statement
+  - human_review_required_for_canonical_use
+  - worm_required_for_activation_or_override
 ---
 
 # PACE-AI Core Governance Protocols
 
+## Governance Boundary
+
+This file is a non-canonical governance protocol support draft for evidence preparation only. It supports governance gap review and human-review material preparation.
+
+This file has no execution authority and no approval authority. It is not authoritative policy, not the controlling reference and not canonical governance authority.
+
+This file must not be used as human override authority, activation order authority, lifecycle promotion authority, approval authority, formal Guardian approval authority, production readiness authority or K / CEO approval substitute.
+
+This file does not grant production execution authority, routing authority, tool permission expansion authority, active baseline modification authority, activation authority or lifecycle promotion authority.
+
+Any canonical use, activation, lifecycle promotion, human override, production readiness decision or approval decision requires separate governance PR, Guardian Review, human approval and WORM where required.
+
 ## 1. Role Definition
 
-You are the **PACE-AI Core Governance Protocols**.
+This support draft describes **PACE-AI Core Governance Protocols** for review purposes only.
 
-This file defines the common governance law for the entire `agents/` repository.
+This file may inform supporting governance notes for the `agents/` repository.
 
-It is the master reference for:
+It is a non-canonical reference draft for:
 
 - High-risk authority
 - Auditability
@@ -39,7 +97,7 @@ It is the master reference for:
 
 This file does not define a single Agent.
 
-It defines the operating law that every Agent, governance protocol, routing rule, repository map and production workflow must respect.
+It provides supporting governance notes that may inform human-reviewed Agent, governance protocol, routing rule, repository map and production workflow reviews.
 
 PACE-AI does not rely on trust alone.
 
@@ -53,7 +111,7 @@ The governing sentence is:
 
 ## 2. Purpose
 
-The purpose of this file is to provide a single source of truth for how PACE-AI controls authority, risk, release, override, audit and shutdown behavior.
+The purpose of this file is to provide a support reference only for how PACE-AI may review authority, risk, release, override, audit and shutdown behavior.
 
 This file answers seven enterprise governance questions:
 
@@ -106,7 +164,7 @@ A mature Agent OS must know:
 - What must remain human-accountable
 - What must never be silently modified by Codex or any automation tool
 
-This file is the constitutional layer for those judgments.
+This file is review material for those judgments and does not create canonical governance authority.
 
 ---
 
@@ -588,7 +646,7 @@ Rule:
 
 ## 12.1 Purpose
 
-Production Readiness determines whether PACE-AI or an Agent workflow may enter real operational use.
+Production Readiness review may inform whether PACE-AI or an Agent workflow should be considered for real operational use.
 
 Production activation must not be treated as simple deployment.
 
@@ -618,7 +676,7 @@ Before production activation, confirm:
 
 ## 12.3 No-Go Conditions
 
-Production must be blocked if any of the following exists:
+Production readiness reviewers should recommend HOLD or escalation if any of the following exists:
 
 - Missing registry entry
 - Missing or invalid frontmatter
@@ -642,7 +700,7 @@ Rule:
 
 ## 13. Mandatory High-Risk Flow
 
-All High-risk requests must follow this flow:
+High-risk requests should be reviewed against this proposed flow:
 
 ```text
 High-Risk Request
@@ -659,3 +717,4 @@ High-Risk Request
 → Soak Time Monitoring
 → Expand / Hold / Abort / Escalate
 → Postmortem / Playbook Update
+```
