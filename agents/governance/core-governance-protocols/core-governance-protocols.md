@@ -115,28 +115,28 @@ The purpose of this file is to provide a support reference only for how PACE-AI 
 
 This file answers seven enterprise governance questions:
 
-1. **How does authority leave evidence?**  
+1. **How does authority leave evidence?**
    Through WORM Audit.
 
-2. **How is risk contained before it spreads?**  
+2. **How is risk contained before it spreads?**
    Through Canary Release and Blast Radius Control.
 
-3. **How can humans override without becoming unaccountable?**  
+3. **How can humans override without becoming unaccountable?**
    Through Human Override Accountability.
 
-4. **When must the system stop?**  
+4. **When must the system stop?**
    Through Kill Switch governance.
 
-5. **Who protects professional standards?**  
+5. **Who protects professional standards?**
    Through Guardian Review.
 
-6. **How do Agents stay aligned over time?**  
+6. **How do Agents stay aligned over time?**
    Through Agent Drift Review.
 
-7. **When is production operation allowed?**  
+7. **When is production operation allowed?**
    Through Production Readiness and Controlled Activation.
 
-This file exists because enterprise AI governance cannot depend on memory, goodwill, informal chat messages or “someone said it was approved.”
+This file exists because enterprise AI governance cannot depend on memory, goodwill, informal chat messages or ?omeone said it was approved.??
 
 Every high-risk action must have a visible decision path, a responsible owner, an evidence chain and a control boundary.
 
@@ -146,8 +146,8 @@ Every high-risk action must have a visible decision path, a responsible owner, a
 
 PACE-AI is built on one operating belief:
 
-**Speed without evidence becomes risk.  
-Authority without accountability becomes abuse.  
+**Speed without evidence becomes risk.
+Authority without accountability becomes abuse.
 Automation without boundaries becomes systemic failure.**
 
 Therefore, PACE-AI does not treat governance as paperwork.
@@ -168,7 +168,7 @@ This file is review material for those judgments and does not create canonical g
 
 ---
 
-## 4. Principle 0｜Company Interest Supremacy
+## 4. Principle 0嚚ompany Interest Supremacy
 
 ## 4.1 Definition
 
@@ -233,7 +233,7 @@ The following protocols form the core governance stack.
 
 ---
 
-## 6. Protocol 1｜WORM Audit
+## 6. Protocol 1嚚ORM Audit
 
 ## 6.1 Purpose
 
@@ -315,7 +315,7 @@ Rule:
 
 ---
 
-## 7. Protocol 2｜Canary Release
+## 7. Protocol 2嚚anary Release
 
 ## 7.1 Purpose
 
@@ -347,10 +347,10 @@ Canary Release applies to:
 
 | Risk Level | Initial Exposure | Soak Time | Rule |
 |---|---:|---|---|
-| Low | ≤25% | 4–8 hours | Fast rollback allowed. |
-| Medium | ≤10% | 24 hours | Counter-Metrics must remain stable. |
-| High | ≤5% | 48 hours | Guardian Review and Oracle Verification required. |
-| Veto Override | 1–5% | 48–72 hours | No auto-expansion. Original Guardian continues monitoring. |
+| Low | ??5% | 4?? hours | Fast rollback allowed. |
+| Medium | ??0% | 24 hours | Counter-Metrics must remain stable. |
+| High | ??% | 48 hours | Guardian Review and Oracle Verification required. |
+| Veto Override | 1??% | 48??2 hours | No auto-expansion. Original Guardian continues monitoring. |
 | Critical | 0% | No real Canary | Sandbox, simulation or C-Level War Room only. |
 
 ## 7.4 Canary Expansion Requirements
@@ -393,7 +393,7 @@ Rule:
 
 ---
 
-## 8. Protocol 3｜Human Override Accountability
+## 8. Protocol 3嚚uman Override Accountability
 
 ## 8.1 Purpose
 
@@ -447,8 +447,8 @@ Human Override must not:
 - Release Kill Switch without root-cause verification
 - Unlock high-risk funding without Counter-Metrics
 - Convert Canary success into Stable approval
-- Use “business urgency” as the only reason
-- Use “leadership request” as the only evidence
+- Use ?usiness urgency??as the only reason
+- Use ?eadership request??as the only evidence
 
 Rule:
 
@@ -456,7 +456,7 @@ Rule:
 
 ---
 
-## 9. Protocol 4｜Kill Switch
+## 9. Protocol 4嚚ill Switch
 
 ## 9.1 Purpose
 
@@ -518,7 +518,7 @@ Rule:
 
 ---
 
-## 10. Protocol 5｜Guardian Review
+## 10. Protocol 5嚚uardian Review
 
 ## 10.1 Purpose
 
@@ -575,7 +575,7 @@ Rule:
 
 ---
 
-## 11. Protocol 6｜Agent Drift Review
+## 11. Protocol 6嚚gent Drift Review
 
 ## 11.1 Purpose
 
@@ -704,17 +704,17 @@ High-risk requests should be reviewed against this proposed flow:
 
 ```text
 High-Risk Request
-→ Risk Classification
-→ Guardian Review
-→ Evidence Link Required
-→ WORM Event Created
-→ Canary Scope Defined
-→ Counter-Metrics Attached
-→ Oracle Verification Connected
-→ Rollback Plan Confirmed
-→ Kill Switch Ready
-→ Controlled Execution
-→ Soak Time Monitoring
-→ Expand / Hold / Abort / Escalate
-→ Postmortem / Playbook Update
+??Risk Classification
+??Guardian Review
+??Evidence Link Required
+??WORM Event Created
+??Canary Scope Defined
+??Counter-Metrics Attached
+??Oracle Verification Connected
+??Rollback Plan Confirmed
+??Kill Switch Ready
+??Controlled Execution
+??Soak Time Monitoring
+??Expand / Hold / Abort / Escalate
+??Postmortem / Playbook Update
 ```
