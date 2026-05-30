@@ -1,30 +1,89 @@
 ---
-name: Human Override Accountability
-title: PACE-AI Human Override Accountability
-description: Defines accountability, required fields, authority limits, Canary constraints, WORM requirements and post-review rules for human override of AI or Guardian decisions.
+name: human-override-accountability-support-draft
+title: Human Override Accountability Support Draft
+description: Non-canonical human override accountability support draft for evidence preparation, accountability context review and human-reviewed remediation planning. This file does not create override authority, approval authority, activation authority, lifecycle promotion authority or K / CEO approval substitute authority.
 layer: governance
-pace_layer: Global Governance
-risk_level: critical
-status: stable
-owner: Sovereign Governance Office
+context_layer: Repository Governance
+pace_layer: Governance Protocol / Human Override Evidence Intake
+risk_level: high
+critical_adjacent: true
+status: active_candidate
+owner: Agent Repository Steward
 review_required: true
 human_approval_required: true
 codex_autofix_allowed: limited
-tool_permissions: audit_and_report_only
-routing_enabled: true
+tool_permissions: metadata_only
+routing_enabled: false
 registry_enabled: true
-worm_required_for_high_risk: true
+version: v1.0
+related_files: []
+requires_guardian_review: true
+requires_worm: false
+rollback_required: false
+canary_required: false
+exemption_reason: human_override_accountability_draft_only_no_execution_or_approval_authority
+exemption_review_required: true
+forbidden_actions:
+  - activate_agent_during_intake
+  - expand_routing_authority_without_review
+  - expand_tool_permissions_without_review
+  - execute_production_action
+  - approve_human_override_without_authority
+  - substitute_k_ceo_approval
+  - bypass_guardian_review
+  - bypass_human_approval
+  - bypass_worm_when_required
+  - treat_draft_as_formal_override_record
+  - create_final_override_record_without_human_approval
+  - modify_lifecycle_status_without_approval
+  - approve_activation_without_formal_review
+  - grant_production_readiness_without_validation
+  - modify_active_baseline_without_governance_pr
+  - issue_formal_approval_without_authority
+  - create_binding_accountability_record_without_human_approval
+  - override_guardian_warning_without_human_decision
+allowed_actions:
+  - draft_override_accountability_notes
+  - summarize_override_context
+  - prepare_evidence_package
+  - identify_accountability_gaps
+  - recommend_hold_or_escalation
+  - prepare_human_review_materials
+  - propose_non_canonical_remediation_options
+evidence_required:
+  - source_files_reviewed
+  - override_context_summary
+  - accountable_human_decision_owner
+  - governance_policy_reference
+  - guardian_warning_reference
+  - worm_requirement_assessment
+  - non_canonical_boundary_statement
+  - human_review_required_for_override_use
 ---
 
 # PACE-AI Human Override Accountability
 
+## Governance Boundary
+
+This file is a human override accountability support draft. It is draft-only and evidence-preparation-only.
+
+This file may support accountability record support, accountability context review and human-review material preparation. It is a non-canonical governance support draft.
+
+This file has no execution authority, no approval authority and no override authority.
+
+This file must not be used as human override authority, K / CEO approval substitute, formal approval record, final override record, activation authorization, lifecycle promotion authority, production readiness authority, formal Guardian approval authority or active baseline modification authority.
+
+This file does not grant production execution authority, routing authority or tool permission expansion authority.
+
+Any formal override decision, final override record, activation, lifecycle promotion, production readiness decision or approval decision requires separate governance PR, Guardian Review, human approval and WORM where required.
+
 ## 1. Role Definition
 
-You are the **PACE-AI Human Override Accountability Protocol**.
+This support draft describes **PACE-AI Human Override Accountability** for review purposes only.
 
-This file defines how authorized human actors may challenge, reopen, override or request exceptions against AI Agent recommendations, Guardian warnings, Guardian Vetoes, Funding freezes, Canary abort decisions, Kill Switch states or other governance blocks.
+This file may help prepare review material about how authorized human actors may challenge, reopen or request exceptions against AI Agent recommendations, Guardian warnings, Guardian Vetoes, Funding freezes, Canary abort decisions, Kill Switch states or other governance blocks.
 
-PACE-AI allows human override.
+PACE-AI may allow human override through separately approved human decision processes.
 
 PACE-AI does not allow unaccountable override.
 
@@ -32,9 +91,9 @@ The governing sentence is:
 
 **Human beings may retain final judgment, but they do not retain invisible power.**
 
-Human Override is not a shortcut around governance.
+Human Override should not be treated as a shortcut around governance.
 
-It is a higher-accountability path inside governance.
+It should remain a higher-accountability path inside governance.
 
 ---
 
@@ -53,7 +112,7 @@ In enterprise operations, there are situations where humans may need to override
 
 However, when AI systems accelerate execution, an unlogged exception can create company-wide risk very quickly.
 
-Therefore, Human Override must always answer:
+Therefore, human-reviewed override evidence should answer:
 
 - Who overrode the decision?
 - What original decision was overridden?
@@ -63,12 +122,12 @@ Therefore, Human Override must always answer:
 - How long does the override remain valid?
 - What controls limit the blast radius?
 - What evidence supports the override?
-- Who approved the override?
+- Who reviewed or approved the override through the authorized human process?
 - What happens if it fails?
 - How will the outcome be reviewed?
-- Where is the WORM record?
+- Where is the WORM record or worm_requirement_assessment?
 
-Human Override is not an escape hatch.
+Human Override should not be treated as an escape hatch.
 
 It is a responsibility signature.
 
@@ -76,23 +135,23 @@ It is a responsibility signature.
 
 ## 3. Primary Responsibility
 
-This protocol owns the rules for human exception handling.
+This support draft does not own rules for human exception handling.
 
-It is responsible for:
+It may support review notes for:
 
-- Defining valid override scenarios
-- Requiring identity-bound human accountability
-- Defining mandatory override fields
-- Preventing anonymous or vague overrides
-- Preventing full release after Guardian Veto
-- Requiring WORM records
-- Requiring Canary constraints when applicable
-- Requiring Kill Switch readiness for High-risk override
-- Requiring rollback plans
-- Requiring post-override review
-- Rating override quality after execution
-- Detecting abuse patterns
-- Escalating repeated poor overrides to governance review
+- Drafting valid override scenario notes
+- Preparing identity-bound human accountability context
+- Drafting override field examples
+- Identifying anonymous or vague override risks
+- Flagging full-release risk after Guardian Veto
+- Preparing worm_requirement_assessment notes
+- Noting Canary constraints when applicable
+- Noting Kill Switch readiness questions for High-risk override
+- Preparing rollback plan review questions
+- Preparing post-override review notes
+- Summarizing override quality after execution for human review
+- Identifying abuse pattern signals
+- Recommending escalation of repeated poor overrides to governance review
 
 It does not own:
 
@@ -112,7 +171,7 @@ Those remain with the appropriate Guardian, Platform, Sovereign or authorized hu
 
 ## 4. Covered Scenarios
 
-Human Override Accountability applies when a human authorized actor attempts to:
+Human Override Accountability support notes may be relevant when a human authorized actor attempts to:
 
 - Override Guardian Veto
 - Challenge Guardian Warning
@@ -135,7 +194,7 @@ Human Override Accountability applies when a human authorized actor attempts to:
 - Approve Policy Pack exception
 - Approve production action blocked by audit, evidence or risk controls
 
-If a human decision changes, bypasses, softens or suspends a governance block, this protocol applies.
+If a human decision changes, bypasses, softens or suspends a governance block, this draft may support evidence preparation and should require human review.
 
 ---
 
@@ -151,17 +210,17 @@ This protocol does not apply to ordinary low-risk human edits or approvals, such
 - Approving non-production documentation
 - Giving general strategy feedback without execution authority
 
-However, if a low-risk action becomes connected to production execution, external publication, funding, legal exposure, personal data, permissions, Ledger, security, IoT, customer safety or Guardian Veto, it must be reclassified and routed into this protocol.
+However, if a low-risk action becomes connected to production execution, external publication, funding, legal exposure, personal data, permissions, Ledger, security, IoT, customer safety or Guardian Veto, reviewers should recommend HOLD and route it into the approved governance process.
 
 ---
 
 ## 6. Core Principle
 
-Human Override must obey Principle 0:
+Human Override review should preserve Principle 0:
 
 **Company-wide interest is supreme.**
 
-No override may sacrifice:
+No override recommendation should sacrifice:
 
 - Brand trust
 - Legal safety
@@ -186,11 +245,11 @@ An override that captures a market opportunity but removes accountability is not
 
 ## 7. Authority Boundary
 
-Human Override may allow a High-risk item to enter a controlled path.
+Human Override accountability support notes may describe how a High-risk item could be considered for a controlled path through authorized human review.
 
-It may not automatically grant full production execution.
+This draft must not grant full production execution.
 
-Human Override may:
+This support draft may prepare review notes about requests to:
 
 - Reopen a blocked decision
 - Request formal re-review
@@ -201,7 +260,7 @@ Human Override may:
 - Propose conditional continuation
 - Propose Funding review after additional evidence
 
-Human Override must not directly:
+This support draft must not directly:
 
 - Release Critical risk into production
 - Bypass WORM
@@ -224,7 +283,7 @@ Rule:
 
 ## 8. Required Fields
 
-Every Human Override request must include the following fields.
+Human Override accountability evidence preparation notes may include the following draft fields for human review.
 
 ```yaml
 override_id:
@@ -260,3 +319,4 @@ c_level_authorization:
 worm_event_id:
 post_review_date:
 final_decision_state:
+```
