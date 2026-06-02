@@ -131,8 +131,8 @@ Validated files:
 - Phase 4D total HOLD Candidates: 5
 - Phase 4D total Files Added: 0
 - Phase 4D total Files Modified / Repaired: 0
-- current_validated_ref: `origin/main`
-- current_validated_commit: `d1570d71f9734dcae1b999f99c3bc24689e14ba7`
+- current_validated_ref: origin/main
+- current_validated_commit: d1570d71f9734dcae1b999f99c3bc24689e14ba7
 
 ## Prior Phase Coverage
 
