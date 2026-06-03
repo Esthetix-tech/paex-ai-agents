@@ -70,6 +70,23 @@ It must not act as a canonical source of truth, make router decisions, define sc
 
 For agent-responsibility-matrix specifically, this file must not form binding responsibility assignment and must not designate formal owner or reviewer authority. Any binding ownership or reviewer assignment requires separate governance PR, Guardian Review and human approval.
 
+## Recent Governance References
+
+This registry support draft should be read together with the latest governance records:
+
+- Phase 5 Partial Summary Closing Note.
+- Phase 5-2 Scope Discovery Closing Note.
+- Registry Consistency Read-only Validation Closing Note.
+- Phase 4E HOLD / Exclusion Register.
+
+Current count and intake boundaries:
+
+- Overall safe-managed files total remains 48.
+- Phase 5-2 introduced no safe-managed count increase.
+- Read-only validation, planning notes, documentary notes and closing notes do not increase the operational safe-managed count.
+- HOLD files must not enter a general repair batch.
+- Registry support draft cross-references do not grant activation, routing, tool expansion, runtime, production, publication, customer-facing, approval, Guardian, K / CEO, Sovereign or repair authority.
+
 \# PACE-AI Agent Responsibility Matrix
 
 \## Responsibility Boundaries for 183 Intelligent Agents
