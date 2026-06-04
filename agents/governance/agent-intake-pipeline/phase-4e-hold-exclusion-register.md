@@ -117,13 +117,12 @@ WORM may be required if future authority expansion or formal approval evidence i
 
 ## Active HOLD Register Entries
 
-The active HOLD queue currently excludes the resolved project-manager-senior and report-distribution entries listed in the resolved / repaired section below.
+The active HOLD queue currently excludes the resolved project-manager-senior, report-distribution, and support-responder entries listed in the resolved / repaired section below.
 
 The following files remain active HOLD and must not enter a general repair batch:
 
 | excluded_file_path | exclusion_reason | risk_level | authority_risk_type | prohibited_batch_scope | allowed_future_handling | required_review | guardian_review_required | human_approval_required | worm_required_if_authority_expands | routing_enabled | tool_permissions | current_status | next_allowed_action | quarantine_trigger | notes |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `agents/mission/customer-operations/support-responder/support-support-responder.md` | customer-facing response / CRM-helpdesk / refund-compensation / account-ticket modification risk | high | customer_facing_response / crm_helpdesk_access / refund_compensation / account_ticket_modification | general_phase_4_repair_batch | single_file_governance_pr_only | human_review_required | required | required | assessment_required | false | metadata_only | active_candidate | read_only_review_or_single_file_planning | customer_facing_or_crm_helpdesk_authority_expansion | remains HOLD / read-only only |
 | `agents/governance/guardian-review-coordinator/guardian-review-coordinator.md` | Guardian approval / veto / review coordination / approval substitute ambiguity | high | guardian_approval_adjacent / veto_coordination / approval_substitute_risk | general_phase_4_repair_batch | single_file_governance_pr_only_or_guardian_track | human_review_required | required | required | likely_required | false | metadata_only | active_candidate | read_only_review_or_guardian_track_planning | approval_or_veto_authority_expansion | not general Phase 4 planning support |
 | `agents/guardian/enterprise-risk/risk-assessor/specialized-risk-assessor.md` | final risk decision / Guardian-adjacent / approval substitute risk | high | final_risk_decision / guardian_adjacent / approval_substitute_risk | general_phase_4_repair_batch | single_file_governance_pr_only_or_guardian_track | human_review_required | required | required | likely_required | false | metadata_only | active_candidate | read_only_review_or_guardian_track_planning | final_risk_decision_or_approval_substitute_authority_expansion | remains HOLD / read-only only |
 
@@ -165,12 +164,31 @@ The following files remain active HOLD and must not enter a general repair batch
 - Guardian Review Gate: `PASS`.
 - No activation, routing/tool expansion, external publication, scheduled send, recipient dispatch, BI email execution, customer-facing report delivery, public dashboard/report release, production BI/data write, final official report authority, approval authority, or Guardian / K-CEO / Sovereign substitute authority granted.
 
+### Resolved HOLD Entry: support-support-responder.md
+
+- File: `agents/mission/customer-operations/support-responder/support-support-responder.md`
+- Previously listed as HOLD in Phase 4E HOLD / Exclusion Register.
+- Original HOLD reason: customer-facing response / CRM-helpdesk / refund-compensation / account-ticket modification risk; prior controls were insufficient for direct customer response, CRM/email/helpdesk, ticket/account/order mutation, refund/compensation, SLA/customer commitment, final support resolution, and approval authority.
+- Resolution: resolved by single-file metadata / governance boundary repair.
+- PR #59: MERGED.
+- PR #59 post-merge validation: PASS.
+- Phase 4E support-support-responder Repair Closing Note: MERGED.
+- Current disposition: repaired / safe-managed candidate.
+- Removed from active HOLD queue; retained in historical HOLD record.
+- Current metadata posture: `active_candidate`, `routing_enabled: false`, `tool_permissions: metadata_only`, `human_approval_required: true`, `requires_guardian_review: true`, `requires_worm: false`.
+- Safe-managed count impact: `+1`, already validated by PR #59 post-merge validation.
+- Overall safe-managed files total: `51`.
+- WORM Assessment: `NOT REQUIRED`.
+- Guardian Review Gate: `PASS`.
+- No activation, routing/tool expansion, customer-facing execution, CRM/helpdesk/email access, ticket creation/update/closure/routing/resolution, account/order/payment mutation, refund/compensation/coupon/credit/reimbursement authority, SLA/customer commitment, final support resolution, approval authority, or Guardian / K-CEO / Sovereign substitute authority granted.
+
 ## Register Update Count Model
 
 - Register update count increase: 0.
 - project-manager-senior +1 was already validated by PR #51 post-merge validation.
 - report-distribution-agent +1 was already validated by PR #55 post-merge validation.
-- Current Overall safe-managed files total remains 50.
+- support-support-responder +1 was already validated by PR #59 post-merge validation.
+- Current Overall safe-managed files total remains 51.
 - This register update is status alignment only, not a new safe-managed repair.
 
 ## Project-manager Register Status Update Controls
@@ -251,6 +269,53 @@ Forbidden actions:
 - treat_register_update_as_public_dashboard_release_authority
 - treat_register_update_as_production_bi_data_write_authority
 - treat_register_update_as_final_official_report_authority
+- treat_register_update_as_approval_authority
+- mutate_other_hold_file_status_without_scope
+- remove_historical_hold_record
+- alter_hold_single_file_review_requirement
+- alter_guardian_review_requirement_without_scope
+- mutate_formal_approval_evidence
+- mutate_sovereign_index
+- increase_safe_managed_count_without_post_merge_validation
+- treat_count_update_as_activation
+
+## Support Responder Register Status Update Controls
+
+Allowed actions:
+
+- record_hold_resolution
+- record_repair_reference
+- record_count_reference
+- update_documentary_register_status
+- preserve_historical_hold_record
+- preserve_no_authority_boundary
+- recommend_future_single_file_review
+
+Evidence required:
+
+- phase_4e_hold_register_reference
+- pr_59_reference
+- support_responder_repair_post_merge_validation_reference
+- support_responder_repair_closing_note_reference
+- count_update_statement
+- no_authority_boundary_statement
+- remaining_hold_files_statement
+- future_review_requirement
+
+Forbidden actions:
+
+- treat_register_update_as_activation_authority
+- treat_register_update_as_routing_authority
+- treat_register_update_as_tool_permission_expansion
+- treat_register_update_as_customer_facing_response_authority
+- treat_register_update_as_direct_customer_reply_authority
+- treat_register_update_as_crm_email_helpdesk_authority
+- treat_register_update_as_ticket_mutation_authority
+- treat_register_update_as_account_order_payment_mutation_authority
+- treat_register_update_as_refund_compensation_credit_authority
+- treat_register_update_as_customer_commitment_authority
+- treat_register_update_as_sla_resolution_delivery_promise_authority
+- treat_register_update_as_final_support_resolution_authority
 - treat_register_update_as_approval_authority
 - mutate_other_hold_file_status_without_scope
 - remove_historical_hold_record
