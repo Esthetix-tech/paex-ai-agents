@@ -117,13 +117,12 @@ WORM may be required if future authority expansion or formal approval evidence i
 
 ## Active HOLD Register Entries
 
-The active HOLD queue currently excludes the resolved project-manager-senior entry listed in the resolved / repaired section below.
+The active HOLD queue currently excludes the resolved project-manager-senior and report-distribution entries listed in the resolved / repaired section below.
 
 The following files remain active HOLD and must not enter a general repair batch:
 
 | excluded_file_path | exclusion_reason | risk_level | authority_risk_type | prohibited_batch_scope | allowed_future_handling | required_review | guardian_review_required | human_approval_required | worm_required_if_authority_expands | routing_enabled | tool_permissions | current_status | next_allowed_action | quarantine_trigger | notes |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `agents/platform/reporting/distribution/report-distribution-agent.md` | report distribution / publication / scheduled send / recipient / email / BI-style execution risk | high | external_distribution / scheduled_send / report_publication | general_phase_4_repair_batch | single_file_governance_pr_only | human_review_required | required | required | likely_required | false | metadata_only | active_candidate | read_only_review_or_single_file_planning | external_send_or_scheduler_authority_expansion | remains HOLD / read-only only |
 | `agents/mission/customer-operations/support-responder/support-support-responder.md` | customer-facing response / CRM-helpdesk / refund-compensation / account-ticket modification risk | high | customer_facing_response / crm_helpdesk_access / refund_compensation / account_ticket_modification | general_phase_4_repair_batch | single_file_governance_pr_only | human_review_required | required | required | assessment_required | false | metadata_only | active_candidate | read_only_review_or_single_file_planning | customer_facing_or_crm_helpdesk_authority_expansion | remains HOLD / read-only only |
 | `agents/governance/guardian-review-coordinator/guardian-review-coordinator.md` | Guardian approval / veto / review coordination / approval substitute ambiguity | high | guardian_approval_adjacent / veto_coordination / approval_substitute_risk | general_phase_4_repair_batch | single_file_governance_pr_only_or_guardian_track | human_review_required | required | required | likely_required | false | metadata_only | active_candidate | read_only_review_or_guardian_track_planning | approval_or_veto_authority_expansion | not general Phase 4 planning support |
 | `agents/guardian/enterprise-risk/risk-assessor/specialized-risk-assessor.md` | final risk decision / Guardian-adjacent / approval substitute risk | high | final_risk_decision / guardian_adjacent / approval_substitute_risk | general_phase_4_repair_batch | single_file_governance_pr_only_or_guardian_track | human_review_required | required | required | likely_required | false | metadata_only | active_candidate | read_only_review_or_guardian_track_planning | final_risk_decision_or_approval_substitute_authority_expansion | remains HOLD / read-only only |
@@ -148,11 +147,30 @@ The following files remain active HOLD and must not enter a general repair batch
 - Guardian Review Gate: `PASS`.
 - No activation, routing/tool expansion, delivery commitment, task assignment, scope/schedule/budget approval, customer-facing promise, production execution, PM/owner/approver replacement, approval authority, Guardian / K-CEO / Sovereign substitute authority granted.
 
+### Resolved HOLD Entry: report-distribution-agent.md
+
+- File: `agents/platform/reporting/distribution/report-distribution-agent.md`
+- Previously listed as HOLD in Phase 4E HOLD / Exclusion Register.
+- Original HOLD reason: report distribution / publication / scheduled send / recipient / BI-style execution risk; prior `human_approval_required: false`; missing explicit Guardian / WORM / rollback / canary controls.
+- Resolution: resolved by single-file metadata / governance boundary repair.
+- PR #55: MERGED.
+- PR #55 post-merge validation: PASS.
+- Phase 4E report-distribution-agent Repair Closing Note: MERGED.
+- Current disposition: repaired / safe-managed candidate.
+- Removed from active HOLD queue; retained in historical HOLD record.
+- Current metadata posture: `active_candidate`, `routing_enabled: false`, `tool_permissions: metadata_only`, `human_approval_required: true`, `requires_guardian_review: true`, `requires_worm: false`.
+- Safe-managed count impact: `+1`, already validated by PR #55 post-merge validation.
+- Overall safe-managed files total: `50`.
+- WORM Assessment: `NOT REQUIRED`.
+- Guardian Review Gate: `PASS`.
+- No activation, routing/tool expansion, external publication, scheduled send, recipient dispatch, BI email execution, customer-facing report delivery, public dashboard/report release, production BI/data write, final official report authority, approval authority, or Guardian / K-CEO / Sovereign substitute authority granted.
+
 ## Register Update Count Model
 
 - Register update count increase: 0.
 - project-manager-senior +1 was already validated by PR #51 post-merge validation.
-- Current Overall safe-managed files total remains 49.
+- report-distribution-agent +1 was already validated by PR #55 post-merge validation.
+- Current Overall safe-managed files total remains 50.
 - This register update is status alignment only, not a new safe-managed repair.
 
 ## Project-manager Register Status Update Controls
@@ -187,6 +205,53 @@ Forbidden actions:
 - treat_register_update_as_task_assignment_authority
 - treat_register_update_as_scope_schedule_budget_approval
 - treat_register_update_as_pm_owner_approver_replacement
+- mutate_other_hold_file_status_without_scope
+- remove_historical_hold_record
+- alter_hold_single_file_review_requirement
+- alter_guardian_review_requirement_without_scope
+- mutate_formal_approval_evidence
+- mutate_sovereign_index
+- increase_safe_managed_count_without_post_merge_validation
+- treat_count_update_as_activation
+
+## Report Distribution Register Status Update Controls
+
+Allowed actions:
+
+- record_hold_resolution
+- record_repair_reference
+- record_count_reference
+- update_documentary_register_status
+- preserve_historical_hold_record
+- preserve_no_authority_boundary
+- recommend_future_single_file_review
+
+Evidence required:
+
+- phase_4e_hold_register_reference
+- pr_55_reference
+- report_distribution_repair_post_merge_validation_reference
+- report_distribution_repair_closing_note_reference
+- count_update_statement
+- no_authority_boundary_statement
+- remaining_hold_files_statement
+- future_review_requirement
+
+Forbidden actions:
+
+- treat_register_update_as_activation_authority
+- treat_register_update_as_routing_authority
+- treat_register_update_as_tool_permission_expansion
+- treat_register_update_as_external_publication_authority
+- treat_register_update_as_report_distribution_authority
+- treat_register_update_as_scheduled_send_authority
+- treat_register_update_as_recipient_dispatch_authority
+- treat_register_update_as_bi_email_execution_authority
+- treat_register_update_as_customer_facing_report_delivery_authority
+- treat_register_update_as_public_dashboard_release_authority
+- treat_register_update_as_production_bi_data_write_authority
+- treat_register_update_as_final_official_report_authority
+- treat_register_update_as_approval_authority
 - mutate_other_hold_file_status_without_scope
 - remove_historical_hold_record
 - alter_hold_single_file_review_requirement
@@ -268,6 +333,8 @@ This register does not expand tool permissions.
 This register does not grant production execution permission, external communication authority, report distribution / publication authority, CRM/email/helpdesk/production system access, customer-facing execution, binding delivery/project authority, binding task assignment authority, final roadmap / priority authority, refund / compensation authority, customer account / order modification authority, Guardian approval authority, Guardian veto / approval substitute authority, Sovereign / K-CEO substitute authority or final risk decision authority.
 
 This register update does not grant delivery commitment authority, task assignment authority, scope / schedule / milestone approval authority, budget / resource allocation authority, customer-facing promise authority, production execution authority, PM / owner / approver replacement authority, approval authority, Guardian approval, K / CEO approval substitute or Sovereign execution authority.
+
+This register update does not grant external publication authority, report publication / distribution authority, scheduled send authority, recipient dispatch authority, BI email execution authority, customer-facing report delivery authority, public dashboard / report release authority, production BI / data write authority or final official report authority.
 
 This register update does not increase safe-managed count.
 
