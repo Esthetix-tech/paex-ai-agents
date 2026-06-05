@@ -117,13 +117,15 @@ WORM may be required if future authority expansion or formal approval evidence i
 
 ## Active HOLD Register Entries
 
-The active HOLD queue currently excludes the resolved project-manager-senior, report-distribution, support-responder, and specialized-risk-assessor entries listed in the resolved / repaired section below.
+The active HOLD queue currently excludes the resolved project-manager-senior, report-distribution, support-responder, specialized-risk-assessor, and guardian-review-coordinator entries listed in the resolved / repaired section below.
 
-The following file remains active HOLD and must not enter a general repair batch:
+Active HOLD queue: 0.
 
-| excluded_file_path | exclusion_reason | risk_level | authority_risk_type | prohibited_batch_scope | allowed_future_handling | required_review | guardian_review_required | human_approval_required | worm_required_if_authority_expands | routing_enabled | tool_permissions | current_status | next_allowed_action | quarantine_trigger | notes |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `agents/governance/guardian-review-coordinator/guardian-review-coordinator.md` | Guardian approval / veto / review coordination / approval substitute ambiguity | high | guardian_approval_adjacent / veto_coordination / approval_substitute_risk | general_phase_4_repair_batch | single_file_governance_pr_only_or_guardian_track | human_review_required | required | required | likely_required | false | metadata_only | active_candidate | read_only_review_or_guardian_track_planning | approval_or_veto_authority_expansion | not general Phase 4 planning support |
+Remaining active HOLD files: none.
+
+No Phase 4E HOLD file remains in the active unresolved HOLD queue.
+
+Any future activation, routing, tool expansion, authority expansion, or Phase 4E final closure must be separately scoped.
 
 ## Resolved HOLD / Repaired Entries
 
@@ -199,6 +201,24 @@ The following file remains active HOLD and must not enter a general repair batch
 - Guardian Review Gate: `PASS`.
 - No activation, routing/tool expansion, final risk decision, risk acceptance/rejection, binding risk score/gate decision, compliance/legal/financial finality, formal approval evidence mutation, audit evidence mutation, lifecycle promotion/demotion, final risk report authority, approval authority, or Guardian / K-CEO / Sovereign substitute authority granted.
 
+### Resolved HOLD Entry: guardian-review-coordinator.md
+
+- File: `agents/governance/guardian-review-coordinator/guardian-review-coordinator.md`
+- Previously listed as HOLD in Phase 4E HOLD / Exclusion Register.
+- Original HOLD reason: Guardian approval coordination / veto / escalation / approval-flow substitute ambiguity; prior controls were insufficient for Guardian approval, Guardian veto, final review outcome, approval / denial / sign-off, approval record mutation, formal/audit evidence mutation, lifecycle authority, direct escalation execution, reviewer replacement, pass/fail gate, K / CEO approval substitute, and Sovereign boundary controls.
+- Resolution: resolved by single-file metadata / governance boundary repair.
+- PR #67: MERGED.
+- PR #67 post-merge validation: PASS.
+- Phase 4E guardian-review-coordinator Repair Closing Note: MERGED.
+- Current disposition: repaired / safe-managed candidate.
+- Removed from active HOLD queue; retained in historical HOLD record.
+- Current metadata posture: `active_candidate`, `routing_enabled: false`, `tool_permissions: metadata_only`, `human_approval_required: true`, `requires_guardian_review: true`, `requires_worm: false`.
+- Safe-managed count impact: `+1`, already validated by PR #67 post-merge validation.
+- Overall safe-managed files total: `53`.
+- WORM Assessment: `NOT REQUIRED`.
+- Guardian Review Gate: `PASS`.
+- No activation, routing/tool expansion, Guardian approval, Guardian veto, final review outcome, approval / denial / sign-off, approval record mutation, formal approval evidence mutation, audit evidence mutation, lifecycle promotion/demotion, direct escalation execution, reviewer replacement, pass/fail gate, K / CEO approval substitute, Sovereign execution, runtime authority, or production authority granted.
+
 ## Register Update Count Model
 
 - Register update count increase: 0.
@@ -206,7 +226,8 @@ The following file remains active HOLD and must not enter a general repair batch
 - report-distribution-agent +1 was already validated by PR #55 post-merge validation.
 - support-support-responder +1 was already validated by PR #59 post-merge validation.
 - specialized-risk-assessor +1 was already validated by PR #63 post-merge validation.
-- Current Overall safe-managed files total remains 52.
+- guardian-review-coordinator +1 was already validated by PR #67 post-merge validation.
+- Current Overall safe-managed files total remains 53.
 - This register update is status alignment only, not a new safe-managed repair.
 
 ## Project-manager Register Status Update Controls
@@ -391,6 +412,56 @@ Forbidden actions:
 - increase_safe_managed_count_without_post_merge_validation
 - treat_count_update_as_activation
 
+## Guardian Review Coordinator Register Status Update Controls
+
+Allowed actions:
+
+- record_hold_resolution
+- record_repair_reference
+- record_count_reference
+- update_documentary_register_status
+- preserve_historical_hold_record
+- preserve_no_authority_boundary
+- recommend_phase_4e_final_closure_review
+
+Evidence required:
+
+- phase_4e_hold_register_reference
+- pr_67_reference
+- guardian_review_coordinator_repair_post_merge_validation_reference
+- guardian_review_coordinator_repair_closing_note_reference
+- count_update_statement
+- no_authority_boundary_statement
+- zero_remaining_hold_files_statement
+- phase_4e_final_closure_requirement
+
+Forbidden actions:
+
+- treat_register_update_as_activation_authority
+- treat_register_update_as_routing_authority
+- treat_register_update_as_tool_permission_expansion
+- treat_register_update_as_guardian_approval_authority
+- treat_register_update_as_guardian_veto_authority
+- treat_register_update_as_final_review_outcome_authority
+- treat_register_update_as_approval_denial_signoff_authority
+- treat_register_update_as_approval_record_mutation_authority
+- treat_register_update_as_formal_approval_evidence_mutation_authority
+- treat_register_update_as_audit_evidence_mutation_authority
+- treat_register_update_as_lifecycle_promotion_demotion_authority
+- treat_register_update_as_direct_escalation_execution_authority
+- treat_register_update_as_reviewer_replacement_authority
+- treat_register_update_as_pass_fail_gate_authority
+- treat_register_update_as_k_ceo_substitute_authority
+- treat_register_update_as_sovereign_execution_authority
+- remove_historical_hold_record
+- alter_hold_single_file_review_requirement
+- alter_guardian_review_requirement_without_scope
+- mutate_formal_approval_evidence
+- mutate_audit_evidence
+- mutate_sovereign_index
+- increase_safe_managed_count_without_post_merge_validation
+- treat_count_update_as_activation
+
 ## Watchlist
 
 The following watchlist files are not included in initial 5-file HOLD register batch:
@@ -467,6 +538,8 @@ This register update does not grant delivery commitment authority, task assignme
 This register update does not grant final risk decision authority, risk acceptance / rejection authority, binding risk score / gate decision authority, compliance / legal / financial finality, formal approval evidence mutation authority, audit evidence mutation authority, lifecycle promotion / demotion authority, final risk report authority, approval authority, Guardian approval, K / CEO approval substitute or Sovereign execution authority.
 
 This register update does not grant external publication authority, report publication / distribution authority, scheduled send authority, recipient dispatch authority, BI email execution authority, customer-facing report delivery authority, public dashboard / report release authority, production BI / data write authority or final official report authority.
+
+This register update does not grant Guardian approval authority, Guardian veto authority, final review outcome authority, approval / denial / sign-off authority, approval record mutation authority, formal approval evidence mutation authority, audit evidence mutation authority, lifecycle promotion / demotion authority, direct escalation execution authority, reviewer replacement authority, pass/fail gate authority, K / CEO approval substitute authority or Sovereign execution authority.
 
 This register update does not increase safe-managed count.
 
