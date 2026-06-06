@@ -81,7 +81,11 @@ This registry support draft should be read together with the latest governance r
 
 Current count and intake boundaries:
 
-- Overall safe-managed files total remains 48.
+- Prior registry support count reference: `48`.
+- Current authoritative safe-managed files total: `53`.
+- Authority source: Safe-managed Count Reconciliation Note, 183 Agents Master Inventory Summary, and Phase 4E Final Closure Summary.
+- Inventory boundary: `183` remains a governance import target / target inventory concept; `183` physical agent files are not observed on `origin/main`.
+- No-authority boundary: this registry support count reconciliation does not activate agents, does not authorize routing/tool expansion, does not enter Phase 5, does not increase safe-managed count, does not grant production/runtime authority, and does not mutate the Sovereign index or formal/audit evidence.
 - Phase 5-2 introduced no safe-managed count increase.
 - Read-only validation, planning notes, documentary notes and closing notes do not increase the operational safe-managed count.
 - HOLD files must not enter a general repair batch.
