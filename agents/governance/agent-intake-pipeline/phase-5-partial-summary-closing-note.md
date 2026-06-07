@@ -133,6 +133,8 @@ This partial summary covers:
 | Overall safe-managed files total | 48 | current carry-forward total |
 | Read-only inventory / planning notes / closing notes | N/A | do not increase operational safe-managed count |
 
+Annotation: The `48` value above is preserved as Phase 5 partial historical / carry-forward context, including the original `+2`, `+1`, and partial increase `3` count chain. Current authoritative safe-managed total is `53`. This annotation has count increase `0`, does not authorize Phase 5 execution, does not activate agents, does not authorize routing/tool expansion or authority expansion, and does not mutate the Sovereign index or formal/audit evidence.
+
 ## Phase 5-0 Read-only Inventory Summary
 
 - Files Checked: 3
