@@ -133,6 +133,8 @@ exemption_review_required: true
 | agents/shared/README.md | 0 new count | already Phase 1 accepted; not a new operational repair |
 | Documentary notes | 0 new count | do not increase operational safe-managed count |
 
+Annotation: The `48` value above is preserved as Phase 5-2 historical / planning context. Current authoritative safe-managed total is `53`. This annotation has count increase `0`, does not authorize Phase 5 execution, does not activate agents, does not authorize routing/tool expansion or authority expansion, and does not mutate the Sovereign index or formal/audit evidence.
+
 ## Read-only Validation Result
 
 - Files Checked: 1
