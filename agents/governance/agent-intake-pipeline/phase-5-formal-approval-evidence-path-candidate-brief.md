@@ -332,6 +332,10 @@ Future risk acceptance: WORM REQUIRED.
 Future lifecycle state: WORM REQUIRED.
 Future production authority: WORM REQUIRED.
 Future authority / Sovereign boundary: WORM REQUIRED.
+Future canonical WORM Event Schema mutation, future schema-field change, and future mandatory canonical field change are WORM REQUIRED and remain HOLD unless separately scoped, reviewed, and explicitly authorized by K.
+Future schema mutation requires separate K authorization.
+Future schema mutation requires WORM assessment.
+Future schema mutation requires Guardian Review / Tier 2 / post-merge validation.
 
 ## Rename Boundary
 
@@ -341,6 +345,7 @@ This brief does not authorize repo-wide text replacement.
 Future rename requires separate read-only impact discovery.
 Future rename requires separate K authorization.
 Future rename may require WORM assessment if authority boundary, lifecycle state, formal evidence, execution authorization, risk acceptance, Sovereign boundary, audit evidence, or WORM records are affected.
+Future rename remains HOLD unless separately scoped and authorized.
 
 ## Count Model
 
@@ -351,6 +356,8 @@ Future rename may require WORM assessment if authority boundary, lifecycle state
 | current physical agents/**/*.md count | 139 |
 | candidate brief physical markdown effect | +1 documentary markdown only |
 
+This repair adds no new physical markdown file.
+This repair does not increase physical agents/**/*.md file count.
 If merged, physical agents/**/*.md count may become 140.
 140 would be documentary markdown count only.
 140 would not be safe-managed count.
@@ -370,7 +377,49 @@ If merged, physical agents/**/*.md count may become 140.
 140 would not be WORM record creation.
 140 would not be formal approval evidence creation.
 140 would not be lifecycle state.
-183 remains NOT OBSERVED as physical completion.
+183 remains NOT OBSERVED unless directly verified.
+
+## Remaining Blockers
+
+- generic formal approval evidence path remains candidate / not canonical
+- formal approval evidence field contract remains not canonical
+- K authorization reference format remains not canonical
+- trusted timestamp source remains not canonical
+- hash / previous_hash / Merkle operational model remains not canonical
+- sealing mechanism / sealed_record_status state machine remains not canonical
+- retention / audit mapping remains not canonical
+- external immutable backend decision remains TBD / HOLD
+- actor authority basis remains not canonical
+- policy reference model remains candidate
+- future canonical WORM Event Schema mutation / schema-field change / mandatory canonical field change remains HOLD / WORM REQUIRED
+- future formal approval evidence creation remains HOLD / WORM REQUIRED
+- future canonical WORM storage / sealing convention remains HOLD / WORM REQUIRED
+- future WORM record creation remains HOLD / WORM REQUIRED
+- future actual final go/no-go decision package remains HOLD / WORM REQUIRED
+- future final decision / go-no-go remains HOLD / WORM REQUIRED
+- future execution / activation / risk acceptance / lifecycle / production authority remains HOLD
+- future rename remains HOLD
+
+## Remaining Risks
+
+- activation-specific approval evidence may be overgeneralized into generic final-decision authority
+- candidate path may be misread as canonical path
+- candidate fields may be misread as canonical field contract
+- candidate WORM convention path may be misread as established convention
+- candidate formal approval evidence path may be misread as created evidence
+- Guardian Review may be misread as approval authority
+- Tier 2 PR comment may be misread as approval authority
+- Codex review may be misread as approval authority
+- K / CEO / Sovereign substitute authority may be accidentally implied
+- GitHub timestamp may be over-read as canonical trusted timestamp
+- repo-bound evidence may be over-read as immutable / tamper-evident WORM backend
+- hash / Merkle requirements may be under-specified
+- sealing status may be claimed without defined sealing mechanism
+- future decision posture may be misread as current final decision
+- future no-go posture may be misread as current go/no-go
+- physical markdown count may be misread as safe-managed count or activation denominator
+- pace-ai to PAEX-GOS rename may be accidentally bundled into WORM evidence work
+- any schema-field change without WORM REQUIRED handling may weaken governance boundary
 
 ## Protected No-authority Boundary
 
