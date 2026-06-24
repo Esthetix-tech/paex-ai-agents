@@ -154,7 +154,9 @@ No verification procedure is established.
 
 ## 15. Legal / Audit Applicability Boundary
 
-This brief does not provide legal advice, establish legal sufficiency, or establish audit sufficiency. Legal/audit applicability depends on jurisdiction, use case, retained evidence, verification process, formal approval evidence, and future review. Any future legal/audit acceptance remains separately scoped, reviewed, K-authorized, and WORM-assessed where applicable.
+This brief does not provide legal advice, establish legal sufficiency, or establish audit sufficiency. This brief does not establish evidentiary sufficiency. This brief does not establish regulatory sufficiency.
+
+Legal, audit, evidentiary, and regulatory applicability remain jurisdiction-dependent and use-case-dependent. Any future legal, audit, evidentiary, or regulatory acceptance requires separate scope, separate review, explicit K authorization, and WORM assessment where applicable.
 
 | Candidate Category | Potential Legal / Audit Consideration | Jurisdiction Dependency | Evidence Needed | Future Review Needed | Current Status |
 |---|---|---|---|---|---|
