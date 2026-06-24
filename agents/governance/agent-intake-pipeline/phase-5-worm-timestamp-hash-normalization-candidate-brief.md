@@ -302,6 +302,30 @@ Guardian Review and Tier 2 PR comment are not approval authority.
 
 Each option remains HOLD pending separate K authorization. None is selected by this brief.
 
+## Count Model
+
+If this PR is merged, the physical `agents/**/*.md` count may increase from `142` to `143`.
+
+`143` is documentary Markdown count only.
+
+`143` is not:
+
+- safe-managed count
+- agent-like count
+- activation denominator
+- approval
+- authorization
+- WORM record
+- formal evidence
+- canonical convention
+- model establishment
+- lifecycle state
+- production authority
+
+The safe-managed total remains `53`.
+
+`183` remains NOT OBSERVED unless directly verified from repository evidence.
+
 ## 20. Router Decision
 
 PROCEED only for documentary-only Timestamp / Hash Normalization Candidate Brief PR creation.
