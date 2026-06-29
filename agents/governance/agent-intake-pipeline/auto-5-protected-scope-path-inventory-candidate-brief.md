@@ -456,7 +456,29 @@ This brief does not create production deployment, runtime automation, operations
 
 Future production use remains HOLD and requires separately scoped development, testing, security, deployment, evidence, WORM, authority, and K authorization gates.
 
-## 30. Count Model Boundary
+## 30. Level 2 / Level 3 Boundary
+
+AUTO-5 supports future PR Guard / Level 2 preparation only.
+
+AUTO-5 does not implement Level 2. AUTO-5 does not activate IssueOps. AUTO-5 does not qualify the system for Level 3.
+
+Level 3 remains HOLD until a Level 2 MVP is separately authorized, implemented, tested, and passes 3-5 low-risk PR validation cycles.
+
+This boundary is non-authorizing, non-implementing, non-activating, and non-production. It does not create Level 2 implementation, Level 3 readiness, IssueOps activation, PR Guard activation, production authority, or final go/no-go.
+
+## 31. K Authorization Boundary
+
+Path inventory cannot create K authorization. Path inventory cannot replace K authorization.
+
+Path inventory cannot authorize future mutations. Path inventory cannot authorize protected scope changes.
+
+Labels alone cannot replace K authorization.
+
+Future protected scope mutations require separate scope, review, K authorization, and WORM assessment where applicable.
+
+K authorization remains a separate future human authorization requirement. This brief does not create approval authority, execution authorization, activation authorization, risk acceptance, lifecycle state, production authority, or final go/no-go.
+
+## 32. Count Model Boundary
 
 If this PR is merged, physical `agents/**/*.md` count may increase from `148` to `149`.
 
@@ -485,7 +507,7 @@ The safe-managed total remains `53`.
 
 `183` remains NOT OBSERVED unless directly verified from repository evidence.
 
-## 31. Non-decisions
+## 33. Non-decisions
 
 This brief makes no decision and creates no establishment or activation for:
 
@@ -534,13 +556,13 @@ This brief makes no decision and creates no establishment or activation for:
 - `pace-ai` to `PAEX-GOS` rename
 - repo-wide text replacement
 
-## 32. Rename Boundary
+## 34. Rename Boundary
 
 No `pace-ai` to `PAEX-GOS` rename executed. No repo-wide text replacement executed. Historical references are not silently rewritten.
 
 Future rename remains HOLD unless separately scoped, reviewed, K-authorized, and WORM-assessed where applicable.
 
-## 33. Router Decision
+## 35. Router Decision
 
 PROCEED only for documentary-only AUTO-5 Protected Scope Path Inventory Candidate Brief PR creation.
 
