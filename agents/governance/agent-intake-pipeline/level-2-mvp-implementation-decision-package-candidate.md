@@ -492,6 +492,8 @@ If this PR is merged, physical `agents/**/*.md` count may increase from 158 to 1
 
 159 is not safe-managed count.
 
+159 is not agent-like count.
+
 159 is not activation denominator.
 
 159 is not approval.
@@ -502,23 +504,61 @@ If this PR is merged, physical `agents/**/*.md` count may increase from 158 to 1
 
 159 is not WORM record.
 
-159 is not implementation.
+159 is not Level 2 implementation.
 
-159 is not PR Guard.
+159 is not Level 2 MVP implementation.
+
+159 is not PR Guard implementation.
+
+159 is not GitHub Actions workflow.
 
 159 is not workflow.
 
 159 is not script.
 
+159 is not guard script.
+
+159 is not validation script.
+
 159 is not command parser.
 
+159 is not automation config.
+
 159 is not runtime config.
+
+159 is not PR Guard input file.
 
 159 is not machine-readable input.
 
 159 is not machine-readable enforcement.
 
+159 is not JSON.
+
+159 is not YAML.
+
+159 is not config.
+
+159 is not schema.
+
+159 is not scanner.
+
+159 is not verifier.
+
+159 is not parser.
+
+159 is not validator.
+
+159 is not policy-as-code.
+
+159 is not workflow self-modification control model.
+
+159 is not canonical model.
+
+159 is not lifecycle state.
+
 159 is not production authority.
+
+159 is not final decision.
 
 159 is not final go/no-go.
 
@@ -528,7 +568,7 @@ safe-managed total remains 53.
 
 Sovereign index remains routing_enabled: false.
 
-183 remains NOT OBSERVED as physical completion unless directly verified.
+183 remains NOT OBSERVED as physical completion unless directly verified from repository evidence.
 
 ## WORM / Formal Evidence / Production Boundary
 
