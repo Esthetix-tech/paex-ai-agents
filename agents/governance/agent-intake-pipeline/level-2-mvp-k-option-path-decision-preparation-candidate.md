@@ -415,6 +415,10 @@ If merged later, physical `agents/**/*.md` count may increase from 161 to 162.
 - WORM record
 - AUTO-4 evidence
 - AUTO-12 evidence
+- Path 1 selection
+- Path 2 selection
+- Path 3 selection
+- Path 4 selection
 - Option A selection
 - Option B selection
 - Option C selection
